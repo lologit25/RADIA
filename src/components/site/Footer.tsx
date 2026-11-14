@@ -1,0 +1,31 @@
+import { profile } from "@/lib/projects";
+import { Arrow } from "./Bits";
+
+export function Footer() {
+  return (
+    <footer className="footer" id="contacto">
+      <a className="footer-cta" href={profile.behance} target="_blank" rel="noreferrer">
+        <span className="footer-cta-q">¿Hablamos?</span>
+        <span className="footer-cta-a">
+          Acá
+          <Arrow />
+          <Arrow />
+          <Arrow />
+        </span>
+      </a>
+      <div className="footer-meta">
+        <span>
+          {profile.role} — {profile.company}
+        </span>
+        <span>{profile.location}</span>
+        <a href={profile.behance} target="_blank" rel="noreferrer">
+          Behance ↗
+        </a>
+        <span>©{new Date().getFullYear()}</span>
+      </div>
+      <p className="footer-word" aria-hidden="true">
+        paolo
+      </p>
+    </footer>
+  );
+}

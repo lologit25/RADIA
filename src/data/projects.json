@@ -1,0 +1,1238 @@
+[
+ {
+  "slug": "el-representante-del-hincha-pepsi",
+  "client": "Pepsi",
+  "title": "El Representante del Hincha",
+  "kind": "Campaña integral",
+  "year": 2026,
+  "behance": "https://www.behance.net/gallery/250513207/El-Representante-del-Hincha-Pepsi",
+  "cover": {
+   "src": "/work/el-representante-del-hincha-pepsi/cover.webp",
+   "w": 1254,
+   "h": 980
+  },
+  "credits": [
+   {
+    "role": "Director General Creativo",
+    "names": "Jose Pablo Trinajstich, Mario Taglioretti"
+   },
+   {
+    "role": "Director Creativo",
+    "names": "Juan Pablo de Mello"
+   },
+   {
+    "role": "Redactor Creativo",
+    "names": "Marcel Molina, Paolo Pérez Ramos, Diego Almagro"
+   },
+   {
+    "role": "Dirección de Cuentas",
+    "names": "Mauricio Minchilli"
+   },
+   {
+    "role": "Director de Arte",
+    "names": "Juan Pablo Basanta"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/el-representante-del-hincha-pepsi/01.webp",
+    "w": 1400,
+    "h": 788
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/B2HjtIPINpY/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/el-representante-del-hincha-pepsi/02.mp4",
+      "poster": "/work/el-representante-del-hincha-pepsi/02.webp",
+      "w": 480,
+      "h": 480
+     },
+     {
+      "type": "loop",
+      "src": "/work/el-representante-del-hincha-pepsi/03.mp4",
+      "poster": "/work/el-representante-del-hincha-pepsi/03.webp",
+      "w": 480,
+      "h": 480
+     },
+     {
+      "type": "loop",
+      "src": "/work/el-representante-del-hincha-pepsi/04.mp4",
+      "poster": "/work/el-representante-del-hincha-pepsi/04.webp",
+      "w": 480,
+      "h": 480
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/9HZuV8uNejS/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 400
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/RJnWcMcJy97/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "image",
+    "src": "/work/el-representante-del-hincha-pepsi/05.webp",
+    "w": 1170,
+    "h": 1463
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/GwGnHx2IGLD/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/3fZUNC7JKyX/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "image",
+    "src": "/work/el-representante-del-hincha-pepsi/06.webp",
+    "w": 1170,
+    "h": 1464
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/EsXkFXN5gyK/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/6KWdAWZYQ4W/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/6KYiPXmRS_M/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "image",
+    "src": "/work/el-representante-del-hincha-pepsi/07.webp",
+    "w": 1170,
+    "h": 1463
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/MU59_pxHE2J/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 102
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/GH_ZJgu-T4j/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 102
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/M-BnGPnDMyy/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 102
+   }
+  ]
+ },
+ {
+  "slug": "pilsen-tercer-tiempo",
+  "client": "Pilsen",
+  "title": "Tercer Tiempo",
+  "kind": "Film",
+  "year": 2025,
+  "behance": "https://www.behance.net/gallery/236506053/Pilsen-Tercer-Tiempo",
+  "cover": {
+   "src": "/work/pilsen-tercer-tiempo/cover.webp",
+   "w": 808,
+   "h": 632
+  },
+  "credits": [
+   {
+    "role": "Agencia",
+    "names": "Publicis Impetu"
+   },
+   {
+    "role": "ECD",
+    "names": "Mario Taglioretti"
+   },
+   {
+    "role": "Director General Creativo",
+    "names": "José Pablo Trinajstich, Juan Roldós"
+   },
+   {
+    "role": "Director Creativo",
+    "names": "Nicolás Vilche"
+   },
+   {
+    "role": "Redactor Creativo",
+    "names": "Paolo Pérez Ramos"
+   },
+   {
+    "role": "Director de Arte",
+    "names": "Juan Pablo Basanta"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/pilsen-tercer-tiempo/01.webp",
+    "w": 1000,
+    "h": 72
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126970869?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/02.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/02.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/03.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/03.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/04.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/04.webp",
+      "w": 426,
+      "h": 240
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126969284?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/05.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/05.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/06.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/06.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/07.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/07.webp",
+      "w": 426,
+      "h": 240
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126969350?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/08.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/08.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/09.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/09.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/10.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/10.webp",
+      "w": 426,
+      "h": 240
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126969436?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/11.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/11.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/12.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/12.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/13.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/13.webp",
+      "w": 426,
+      "h": 240
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126969108?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/14.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/14.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/15.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/15.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/16.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/16.webp",
+      "w": 426,
+      "h": 240
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126969565?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/17.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/17.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/18.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/18.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/pilsen-tercer-tiempo/19.mp4",
+      "poster": "/work/pilsen-tercer-tiempo/19.webp",
+      "w": 426,
+      "h": 240
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126969522?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "image",
+    "src": "/work/pilsen-tercer-tiempo/20.webp",
+    "w": 1400,
+    "h": 226
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126969237?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "image",
+    "src": "/work/pilsen-tercer-tiempo/21.webp",
+    "w": 1400,
+    "h": 226
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1126969196?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   },
+   {
+    "type": "image",
+    "src": "/work/pilsen-tercer-tiempo/22.webp",
+    "w": 1000,
+    "h": 72
+   },
+   {
+    "type": "image",
+    "src": "/work/pilsen-tercer-tiempo/23.webp",
+    "w": 1000,
+    "h": 72
+   }
+  ]
+ },
+ {
+  "slug": "inavi-musica-sostenible",
+  "client": "INAVI",
+  "title": "Música Sostenible",
+  "kind": "Film · Música",
+  "year": 2025,
+  "behance": "https://www.behance.net/gallery/221284583/INAVI-Musica-Sostenible",
+  "cover": {
+   "src": "/work/inavi-musica-sostenible/cover.webp",
+   "w": 1294,
+   "h": 1012
+  },
+  "credits": [
+   {
+    "role": "Agencia",
+    "names": "Publicis Impetu"
+   },
+   {
+    "role": "Artista",
+    "names": "Luciano Supervielle"
+   },
+   {
+    "role": "Director General Creativo",
+    "names": "Esteban Barreiro"
+   },
+   {
+    "role": "Director Creativo",
+    "names": "José Pablo Trinajstich"
+   },
+   {
+    "role": "Redactores Creativos",
+    "names": "Nicolás Vilche, Paolo Pérez Ramos"
+   },
+   {
+    "role": "Directora de Arte",
+    "names": "Sofía Vázquez"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "loop",
+    "src": "/work/inavi-musica-sostenible/01.mp4",
+    "poster": "/work/inavi-musica-sostenible/01.webp",
+    "w": 1200,
+    "h": 292
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/02.mp4",
+      "poster": "/work/inavi-musica-sostenible/02.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/03.mp4",
+      "poster": "/work/inavi-musica-sostenible/03.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/04.mp4",
+      "poster": "/work/inavi-musica-sostenible/04.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/05.mp4",
+      "poster": "/work/inavi-musica-sostenible/05.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/06.mp4",
+      "poster": "/work/inavi-musica-sostenible/06.webp",
+      "w": 426,
+      "h": 240
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://www.youtube.com/embed/12sQ1CgfKes?si=rwF06ftywyI-ZdT_",
+    "w": 560,
+    "h": 315
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/07.mp4",
+      "poster": "/work/inavi-musica-sostenible/07.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/08.mp4",
+      "poster": "/work/inavi-musica-sostenible/08.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/09.mp4",
+      "poster": "/work/inavi-musica-sostenible/09.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/10.mp4",
+      "poster": "/work/inavi-musica-sostenible/10.webp",
+      "w": 426,
+      "h": 240
+     },
+     {
+      "type": "loop",
+      "src": "/work/inavi-musica-sostenible/11.mp4",
+      "poster": "/work/inavi-musica-sostenible/11.webp",
+      "w": 426,
+      "h": 240
+     }
+    ]
+   },
+   {
+    "type": "loop",
+    "src": "/work/inavi-musica-sostenible/12.mp4",
+    "poster": "/work/inavi-musica-sostenible/12.webp",
+    "w": 1200,
+    "h": 292
+   }
+  ]
+ },
+ {
+  "slug": "bagno-company-conveniencia-real",
+  "client": "Bagno & Company",
+  "title": "Conveniencia Real",
+  "kind": "Film",
+  "year": 2025,
+  "behance": "https://www.behance.net/gallery/221279595/Bagno-Company-Conveniencia-Real",
+  "cover": {
+   "src": "/work/bagno-company-conveniencia-real/cover.webp",
+   "w": 1294,
+   "h": 1012
+  },
+  "credits": [
+   {
+    "role": "Agencia",
+    "names": "Publicis Impetu"
+   },
+   {
+    "role": "Director General Creativo",
+    "names": "Mario Taglioretti"
+   },
+   {
+    "role": "Director Creativo",
+    "names": "José Pablo Trinajstich"
+   },
+   {
+    "role": "Directora de Arte",
+    "names": "Sofía Vázquez"
+   },
+   {
+    "role": "Redactores Creativos",
+    "names": "Nicolás Vilche, Paolo Pérez Ramos"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "loop",
+    "src": "/work/bagno-company-conveniencia-real/01.mp4",
+    "poster": "/work/bagno-company-conveniencia-real/01.webp",
+    "w": 1200,
+    "h": 292
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/bagno-company-conveniencia-real/02.mp4",
+      "poster": "/work/bagno-company-conveniencia-real/02.webp",
+      "w": 600,
+      "h": 600
+     },
+     {
+      "type": "loop",
+      "src": "/work/bagno-company-conveniencia-real/03.mp4",
+      "poster": "/work/bagno-company-conveniencia-real/03.webp",
+      "w": 600,
+      "h": 600
+     },
+     {
+      "type": "loop",
+      "src": "/work/bagno-company-conveniencia-real/04.mp4",
+      "poster": "/work/bagno-company-conveniencia-real/04.webp",
+      "w": 600,
+      "h": 600
+     },
+     {
+      "type": "loop",
+      "src": "/work/bagno-company-conveniencia-real/05.mp4",
+      "poster": "/work/bagno-company-conveniencia-real/05.webp",
+      "w": 600,
+      "h": 600
+     }
+    ]
+   },
+   {
+    "type": "video",
+    "src": "https://www.youtube.com/embed/z9r_LuHg4yE?si=p21EBIWQfIe_kaPO",
+    "w": 560,
+    "h": 315
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "loop",
+      "src": "/work/bagno-company-conveniencia-real/06.mp4",
+      "poster": "/work/bagno-company-conveniencia-real/06.webp",
+      "w": 600,
+      "h": 600
+     },
+     {
+      "type": "loop",
+      "src": "/work/bagno-company-conveniencia-real/07.mp4",
+      "poster": "/work/bagno-company-conveniencia-real/07.webp",
+      "w": 600,
+      "h": 600
+     },
+     {
+      "type": "loop",
+      "src": "/work/bagno-company-conveniencia-real/08.mp4",
+      "poster": "/work/bagno-company-conveniencia-real/08.webp",
+      "w": 600,
+      "h": 600
+     },
+     {
+      "type": "loop",
+      "src": "/work/bagno-company-conveniencia-real/09.mp4",
+      "poster": "/work/bagno-company-conveniencia-real/09.webp",
+      "w": 600,
+      "h": 600
+     }
+    ]
+   },
+   {
+    "type": "loop",
+    "src": "/work/bagno-company-conveniencia-real/10.mp4",
+    "poster": "/work/bagno-company-conveniencia-real/10.webp",
+    "w": 1200,
+    "h": 292
+   }
+  ]
+ },
+ {
+  "slug": "no-funcionan-igual-fiat",
+  "client": "FIAT",
+  "title": "No funcionan igual",
+  "kind": "Gráfica",
+  "year": 2025,
+  "behance": "https://www.behance.net/gallery/237827155/No-funcionan-igual-FIAT",
+  "cover": {
+   "src": "/work/no-funcionan-igual-fiat/cover.webp",
+   "w": 1084,
+   "h": 848
+  },
+  "credits": [
+   {
+    "role": "Agencia",
+    "names": "Publicis Impetu"
+   },
+   {
+    "role": "Director General Creativo",
+    "names": "José Pablo Trinajstich"
+   },
+   {
+    "role": "Director Creativo",
+    "names": "Juan Pablo de Mello"
+   },
+   {
+    "role": "Director de Cuentas",
+    "names": "Mariano Martinez"
+   },
+   {
+    "role": "Redactor Creativo",
+    "names": "Marcel Molina, Paolo Pérez Ramos"
+   },
+   {
+    "role": "Diseñadora gráfica",
+    "names": "Lucía Campot"
+   },
+   {
+    "role": "Community manager",
+    "names": "Felipe Alvariza"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/no-funcionan-igual-fiat/01.webp",
+    "w": 1400,
+    "h": 788
+   },
+   {
+    "type": "image",
+    "src": "/work/no-funcionan-igual-fiat/02.webp",
+    "w": 1400,
+    "h": 788
+   },
+   {
+    "type": "image",
+    "src": "/work/no-funcionan-igual-fiat/03.webp",
+    "w": 1400,
+    "h": 788
+   }
+  ]
+ },
+ {
+  "slug": "pepsi-70-anos-con-sed-de-mas",
+  "client": "Pepsi",
+  "title": "70 años con sed de más",
+  "kind": "Film",
+  "year": 2025,
+  "behance": "https://www.behance.net/gallery/241022171/Pepsi-70-ANOS-CON-SED-DE-MAS",
+  "cover": {
+   "src": "/work/pepsi-70-anos-con-sed-de-mas/cover.webp",
+   "w": 808,
+   "h": 632
+  },
+  "credits": [
+   {
+    "role": "Agencia",
+    "names": "Publicis Impetu"
+   },
+   {
+    "role": "CEO",
+    "names": "Mario Taglioretti"
+   },
+   {
+    "role": "Director General Creativo",
+    "names": "José Pablo Trinajstich"
+   },
+   {
+    "role": "Director Creativo",
+    "names": "Nicolás Vilche"
+   },
+   {
+    "role": "Redactor Creativo",
+    "names": "Paolo Pérez Ramos"
+   },
+   {
+    "role": "Director de Arte",
+    "names": "Juan Pablo Basanta"
+   },
+   {
+    "role": "Ejecutivo de Cuentas",
+    "names": "Federico Rubino"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "loop",
+    "src": "/work/pepsi-70-anos-con-sed-de-mas/01.mp4",
+    "poster": "/work/pepsi-70-anos-con-sed-de-mas/01.webp",
+    "w": 1200,
+    "h": 300
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/Roh_UqwmXto/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 450
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/9rKXLmkE9-T/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 450
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/SRAWrnIDo38/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 450
+   },
+   {
+    "type": "loop",
+    "src": "/work/pepsi-70-anos-con-sed-de-mas/02.mp4",
+    "poster": "/work/pepsi-70-anos-con-sed-de-mas/02.webp",
+    "w": 1200,
+    "h": 300
+   }
+  ]
+ },
+ {
+  "slug": "pepsi-70-anos-en-uruguay-con-sed-de-mas",
+  "client": "Pepsi",
+  "title": "70 años en Uruguay con sed de más",
+  "kind": "Gráfica",
+  "year": 2025,
+  "behance": "https://www.behance.net/gallery/239629137/Pepsi-70-ANOS-EN-URUGUAY-CON-SED-DE-MAS",
+  "cover": {
+   "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/cover.webp",
+   "w": 1264,
+   "h": 988
+  },
+  "credits": [
+   {
+    "role": "Agencia",
+    "names": "Publicis Impetu"
+   },
+   {
+    "role": "CEO",
+    "names": "Mario Taglioretti, Esteban Barreiro"
+   },
+   {
+    "role": "Director General Creativo",
+    "names": "José Pablo Trinajstich"
+   },
+   {
+    "role": "Director Creativo",
+    "names": "Nicolás Vilche"
+   },
+   {
+    "role": "Redactor Creativo",
+    "names": "Paolo Pérez Ramos"
+   },
+   {
+    "role": "Director de Arte",
+    "names": "Juan Pablo Basanta"
+   },
+   {
+    "role": "Ejecutivo de Cuentas",
+    "names": "Federico Rubino, Noni Blanco"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/01.webp",
+    "w": 1400,
+    "h": 788
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "image",
+      "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/02.webp",
+      "w": 1400,
+      "h": 1120
+     },
+     {
+      "type": "image",
+      "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/03.webp",
+      "w": 1400,
+      "h": 1120
+     },
+     {
+      "type": "image",
+      "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/04.webp",
+      "w": 1400,
+      "h": 1120
+     }
+    ]
+   },
+   {
+    "type": "image",
+    "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/05.webp",
+    "w": 1400,
+    "h": 1120
+   },
+   {
+    "type": "image",
+    "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/06.webp",
+    "w": 1400,
+    "h": 1120
+   },
+   {
+    "type": "image",
+    "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/07.webp",
+    "w": 1400,
+    "h": 1120
+   }
+  ]
+ },
+ {
+  "slug": "tigo-paraguay-se-enciende-nuestra-historia",
+  "client": "Tigo Paraguay",
+  "title": "Se enciende nuestra historia",
+  "kind": "Film",
+  "year": 2025,
+  "behance": "https://www.behance.net/gallery/239046711/Tigo-Paraguay-Se-enciende-nuestra-historia",
+  "cover": {
+   "src": "/work/tigo-paraguay-se-enciende-nuestra-historia/cover.webp",
+   "w": 1294,
+   "h": 1012
+  },
+  "credits": [
+   {
+    "role": "Agencia",
+    "names": "Publicis Impetu"
+   },
+   {
+    "role": "ECD",
+    "names": "Mario Taglioretti"
+   },
+   {
+    "role": "Director General Creativo",
+    "names": "José Pablo Trinajstich"
+   },
+   {
+    "role": "Director Creativo",
+    "names": "Nicolás Vilche"
+   },
+   {
+    "role": "Redactor Creativo",
+    "names": "Paolo Pérez Ramos"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/tigo-paraguay-se-enciende-nuestra-historia/01.webp",
+    "w": 1400,
+    "h": 466
+   },
+   {
+    "type": "video",
+    "src": "https://www.youtube.com/embed/rTLIWws9x3U?si=QXQVdezT-vzY1Exe",
+    "w": 560,
+    "h": 315
+   }
+  ]
+ },
+ {
+  "slug": "santander-mensajes-mayores",
+  "client": "Santander",
+  "title": "Mensajes Mayores",
+  "kind": "Idea alternativa",
+  "year": 2024,
+  "behance": "https://www.behance.net/gallery/207520059/Santander-Mensajes-Mayores",
+  "cover": {
+   "src": "/work/santander-mensajes-mayores/cover.webp",
+   "w": 808,
+   "h": 632
+  },
+  "credits": [
+   {
+    "role": "Redacción Creativa",
+    "names": "Paolo Pérez Ramos"
+   },
+   {
+    "role": "Dirección de Arte",
+    "names": "Paolo Pérez Ramos"
+   },
+   {
+    "role": "Edición de Video",
+    "names": "Luciana Tejería"
+   }
+  ],
+  "awards": [
+   {
+    "medal": "Plata",
+    "festival": "Push The Power",
+    "jury": [
+     "Pablo Sena",
+     "Anthony Aquino",
+     "Victoria Dorregibus",
+     "Lara González"
+    ]
+   },
+   {
+    "medal": "Plata",
+    "festival": "Push The Power",
+    "jury": [
+     "Sofía Lemos",
+     "Germán Ferres",
+     "Paula Barceló",
+     "Deborah Buonomo",
+     "Guzmán Johnson"
+    ]
+   }
+  ],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/santander-mensajes-mayores/01.webp",
+    "w": 1400,
+    "h": 990
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/Dh8gu9Pi5iV/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 305
+   }
+  ]
+ },
+ {
+  "slug": "coca-cola-potencia-tu-felicidad",
+  "client": "Coca-Cola",
+  "title": "Potenciá tu felicidad",
+  "kind": "Campaña gráfica",
+  "year": 2024,
+  "behance": "https://www.behance.net/gallery/207680167/Coca-Cola-Potencia-tu-felicidad",
+  "cover": {
+   "src": "/work/coca-cola-potencia-tu-felicidad/cover.webp",
+   "w": 808,
+   "h": 632
+  },
+  "credits": [
+   {
+    "role": "Redacción Creativa",
+    "names": "Paolo Pérez Ramos"
+   },
+   {
+    "role": "Dirección de Arte",
+    "names": "Karina Bello"
+   }
+  ],
+  "awards": [
+   {
+    "medal": "Grand Prix",
+    "festival": "Push The Power",
+    "jury": [
+     "Pablo Sena",
+     "Anthony Aquino",
+     "Victoria Dorregibus",
+     "Lara González"
+    ]
+   },
+   {
+    "medal": "Oro",
+    "festival": "Push The Power",
+    "jury": [
+     "Pablo Sena",
+     "Anthony Aquino",
+     "Victoria Dorregibus",
+     "Lara González"
+    ]
+   },
+   {
+    "medal": "Bronce",
+    "festival": "Push The Power",
+    "jury": [
+     "Sofía Lemos",
+     "Germán Ferres",
+     "Paula Barceló",
+     "Deborah Buonomo",
+     "Guzmán Johnson"
+    ]
+   }
+  ],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/coca-cola-potencia-tu-felicidad/01.webp",
+    "w": 1400,
+    "h": 990
+   },
+   {
+    "type": "grid",
+    "items": [
+     {
+      "type": "image",
+      "src": "/work/coca-cola-potencia-tu-felicidad/02.webp",
+      "w": 1400,
+      "h": 1980
+     },
+     {
+      "type": "image",
+      "src": "/work/coca-cola-potencia-tu-felicidad/03.webp",
+      "w": 1400,
+      "h": 1980
+     },
+     {
+      "type": "image",
+      "src": "/work/coca-cola-potencia-tu-felicidad/04.webp",
+      "w": 1400,
+      "h": 1980
+     }
+    ]
+   },
+   {
+    "type": "image",
+    "src": "/work/coca-cola-potencia-tu-felicidad/05.webp",
+    "w": 1400,
+    "h": 933
+   },
+   {
+    "type": "image",
+    "src": "/work/coca-cola-potencia-tu-felicidad/06.webp",
+    "w": 1400,
+    "h": 980
+   }
+  ]
+ },
+ {
+  "slug": "volvo-ignition-phone-future-lions",
+  "client": "Volvo",
+  "title": "Ignition Phone",
+  "kind": "Innovación · Future Lions",
+  "year": 2025,
+  "behance": "https://www.behance.net/gallery/223578437/Volvo-Ignition-Phone-Future-Lions",
+  "cover": {
+   "src": "/work/volvo-ignition-phone-future-lions/cover.webp",
+   "w": 1007,
+   "h": 788
+  },
+  "credits": [
+   {
+    "role": "Equipo",
+    "names": "Paolo Perez Ramos, Sabrina Berger, Natalia Azambullo"
+   }
+  ],
+  "awards": [],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/volvo-ignition-phone-future-lions/01.webp",
+    "w": 1400,
+    "h": 788
+   },
+   {
+    "type": "image",
+    "src": "/work/volvo-ignition-phone-future-lions/02.webp",
+    "w": 1400,
+    "h": 788
+   },
+   {
+    "type": "video",
+    "src": "https://player.vimeo.com/video/1075054508?badge=0&autopause=0&player_id=0&app_id=58479",
+    "w": 1920,
+    "h": 1080
+   }
+  ]
+ },
+ {
+  "slug": "falta-de-respeto",
+  "client": null,
+  "title": "Falta de Respeto",
+  "kind": "Film",
+  "year": 2024,
+  "behance": "https://www.behance.net/gallery/212381101/Falta-de-Respeto",
+  "cover": {
+   "src": "/work/falta-de-respeto/cover.webp",
+   "w": 808,
+   "h": 632
+  },
+  "credits": [
+   {
+    "role": "Equipo",
+    "names": "Nicolas Varela, Sabrina Berger, Natalia Azambullo, Karina Bello, Paolo Perez Ramos"
+   }
+  ],
+  "awards": [
+   {
+    "medal": "Shortlist",
+    "festival": "El Ojo de Iberoamérica · Nuevos Talentos",
+    "jury": []
+   }
+  ],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/falta-de-respeto/01.webp",
+    "w": 1400,
+    "h": 357
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/HWCR2zCkFYd/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "image",
+    "src": "/work/falta-de-respeto/02.webp",
+    "w": 1400,
+    "h": 357
+   }
+  ]
+ }
+]
