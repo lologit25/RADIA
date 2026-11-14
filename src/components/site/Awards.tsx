@@ -11,11 +11,7 @@ export function Awards({ index, total }: { index: number; total: number }) {
     <section className="awards" id="premios">
       <SectionHead index={index} total={total} label="Premios" />
       <div className="awards-grid">
-        <h2 className="rv">
-          Lo que dijo
-          <br />
-          el jurado.
-        </h2>
+        <h2 className="rv">Premios.</h2>
         <ol className="awards-list">
           {awards.map((award, i) => (
             <li key={i} className="rv">
@@ -27,6 +23,7 @@ export function Awards({ index, total }: { index: number; total: number }) {
                   <span>
                     {award.project.client ? `${award.project.client} — ` : ""}
                     {award.project.title}
+                    {award.project.group === "student" ? " · Estudiante" : ""}
                   </span>
                 </span>
                 <Arrow className="awards-arrow" />

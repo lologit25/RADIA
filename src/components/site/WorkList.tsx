@@ -3,9 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { pad, projects } from "@/lib/projects";
+import { pad, type Project } from "@/lib/projects";
 
-export function WorkList() {
+export function WorkList({ items }: { items: Project[] }) {
   const [active, setActive] = useState<number | null>(null);
   const previewRef = useRef<HTMLDivElement>(null);
   const target = useRef({ x: 0, y: 0 });
@@ -34,7 +34,7 @@ export function WorkList() {
       }}
       onPointerLeave={() => setActive(null)}
     >
-      {projects.map((project, i) => (
+      {items.map((project, i) => (
         <Link
           key={project.slug}
           href={`/work/${project.slug}`}
@@ -62,7 +62,7 @@ export function WorkList() {
 
       <div className={`work-preview${active === null ? "" : " is-on"}`} ref={previewRef} aria-hidden="true">
         <div className="work-preview-frame">
-          {projects.map((project, i) => (
+          {items.map((project, i) => (
             <Image
               key={project.slug}
               src={project.cover.src}

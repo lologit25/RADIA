@@ -20,10 +20,10 @@ Fuente: https://www.withhoney.com/ (Framer). Inspeccionada a 1440×900 y 390×84
 | Honey | Portafolio |
 |---|---|
 | Nav mono + botón de acento | Nav mono + “Hablemos” celeste |
-| Hero: objeto 3D que cae + titular gigante + logos | Cápsula con reel de portadas + titular + marcas en blanco |
+| Hero: objeto 3D que cae + titular gigante + logos | Tinta negra que cae y forma una pluma fuente (SVG) + titular + marcas en blanco |
 | Panel “About” redondeado, texto que se ilumina al scrollear | “Sobre mí” |
 | `[ 02 / 09 ]` Services: texto fijo + lista grande con foco | “Oficio” |
-| Lista numerada de proceso | “Trabajos” con vista previa que sigue al cursor |
+| Lista numerada de proceso | “Trabajos” (profesional) con vista previa que sigue al cursor; “Estudiante” aparte, en grilla chica |
 | Bloque FAQ en color de acento | “Premios” en celeste |
 | Franja “Where do I sign? / Here ↗↗↗” + wordmark gigante | “¿Hablamos? / Acá ↗↗↗” + “paolo” |
 

@@ -43,9 +43,12 @@ export interface Project {
   credits: Array<{ role: string; names: string }>;
   awards: Award[];
   blocks: Block[];
+  group: "pro" | "student";
 }
 
 export const projects = data as Project[];
+export const proProjects = projects.filter((p) => p.group === "pro");
+export const studentProjects = projects.filter((p) => p.group === "student");
 
 export const profile = {
   name: "Paolo Pérez Ramos",
@@ -57,7 +60,7 @@ export const profile = {
 } as const;
 
 export const clients = Array.from(
-  new Set(projects.map((p) => p.client).filter((c): c is string => Boolean(c))),
+  new Set(proProjects.map((p) => p.client).filter((c): c is string => Boolean(c))),
 );
 
 export function pad(n: number): string {

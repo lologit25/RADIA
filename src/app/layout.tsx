@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s — Paolo Pérez Ramos",
   },
   description:
-    "Portafolio de Paolo Pérez Ramos, redactor creativo en Publicis Impetu, Montevideo. Campañas para Pepsi, Pilsen, FIAT, Santander, Coca-Cola y más.",
+    "Portafolio de Paolo Pérez Ramos, redactor creativo en Publicis Impetu, Montevideo. Campañas para Pepsi, Pilsen, FIAT, Coca-Cola, Tigo Paraguay, INAVI y Bagno & Company.",
 };
 
 export const viewport: Viewport = {

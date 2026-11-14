@@ -6,7 +6,7 @@ Portafolio de redacción creativa. Next.js 16 (App Router) + Tailwind v4, armado
 
 - **Dirección de diseño:** estructura, ritmo y paleta de [withhoney.com](https://www.withhoney.com/),
   con el acento coral reemplazado por celeste pastel (`--accent` en `src/app/globals.css`).
-- **Contenido:** los 12 proyectos, créditos y premios del perfil de
+- **Contenido:** los 13 proyectos (9 profesionales y 4 de estudiante), créditos y premios del perfil de
   [Behance](https://www.behance.net/paoloperezramos). Los datos viven en `src/data/projects.json`
   y los medios en `public/work/<proyecto>/`.
 - **Tipografías:** Geist y Geist Mono, ambas de Google Fonts (`next/font/google`).

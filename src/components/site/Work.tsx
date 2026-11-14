@@ -1,4 +1,4 @@
-import { projects } from "@/lib/projects";
+import { pad, proProjects } from "@/lib/projects";
 import { SectionHead } from "./Bits";
 import { WorkList } from "./WorkList";
 
@@ -8,13 +8,13 @@ export function Work({ index, total }: { index: number; total: number }) {
       <SectionHead index={index} total={total} label="Trabajos" />
       <div className="work-intro">
         <h2 className="two-tone rv">
-          {projects.length === 12 ? "Doce" : projects.length} campañas.
+          Trabajo profesional.
           <br />
-          <span>Cero relleno.</span>
+          <span>{pad(proProjects.length)} proyectos.</span>
         </h2>
-        <p className="mono-note rv">(Seleccioná un proyecto para ver el caso completo)</p>
+        <p className="mono-note rv">(Seleccioná un proyecto para ver el caso)</p>
       </div>
-      <WorkList />
+      <WorkList items={proProjects} />
     </section>
   );
 }

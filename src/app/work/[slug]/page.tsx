@@ -27,10 +27,13 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 
 export default async function ProjectPage({ params }: { params: Params }) {
   const { slug } = await params;
-  const position = projects.findIndex((p) => p.slug === slug);
-  if (position === -1) notFound();
-  const project = projects[position];
-  const next = projects[(position + 1) % projects.length];
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) notFound();
+  const group = projects.filter((p) => p.group === project.group);
+  const position = group.indexOf(project);
+  const next = group[(position + 1) % group.length];
+  const groupLabel = project.group === "student" ? "Estudiante" : "Profesional";
+  const backHref = project.group === "student" ? "/#estudiante" : "/#trabajos";
 
   return (
     <>
@@ -39,11 +42,11 @@ export default async function ProjectPage({ params }: { params: Params }) {
         <header className="project-head">
           <div className="section-head">
             <span>
-              [ {pad(position + 1)} / {pad(projects.length)} ]
+              [ {pad(position + 1)} / {pad(group.length)} ]
             </span>
-            <span>{project.client ?? "Proyecto"}</span>
-            <Link href="/#trabajos" className="project-back">
-              ← Todos los trabajos
+            <span>{groupLabel}</span>
+            <Link href={backHref} className="project-back">
+              ← Volver
             </Link>
           </div>
           <h1 className="project-title">

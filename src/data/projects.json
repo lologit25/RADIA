@@ -151,7 +151,8 @@
     "w": 600,
     "h": 102
    }
-  ]
+  ],
+  "group": "pro"
  },
  {
   "slug": "pilsen-tercer-tiempo",
@@ -433,7 +434,8 @@
     "w": 1000,
     "h": 72
    }
-  ]
+  ],
+  "group": "pro"
  },
  {
   "slug": "inavi-musica-sostenible",
@@ -575,7 +577,8 @@
     "w": 1200,
     "h": 292
    }
-  ]
+  ],
+  "group": "pro"
  },
  {
   "slug": "bagno-company-conveniencia-real",
@@ -699,7 +702,8 @@
     "w": 1200,
     "h": 292
    }
-  ]
+  ],
+  "group": "pro"
  },
  {
   "slug": "no-funcionan-igual-fiat",
@@ -763,7 +767,8 @@
     "w": 1400,
     "h": 788
    }
-  ]
+  ],
+  "group": "pro"
  },
  {
   "slug": "pepsi-70-anos-con-sed-de-mas",
@@ -841,7 +846,8 @@
     "w": 1200,
     "h": 300
    }
-  ]
+  ],
+  "group": "pro"
  },
  {
   "slug": "pepsi-70-anos-en-uruguay-con-sed-de-mas",
@@ -934,7 +940,8 @@
     "w": 1400,
     "h": 1120
    }
-  ]
+  ],
+  "group": "pro"
  },
  {
   "slug": "tigo-paraguay-se-enciende-nuestra-historia",
@@ -984,71 +991,8 @@
     "w": 560,
     "h": 315
    }
-  ]
- },
- {
-  "slug": "santander-mensajes-mayores",
-  "client": "Santander",
-  "title": "Mensajes Mayores",
-  "kind": "Idea alternativa",
-  "year": 2024,
-  "behance": "https://www.behance.net/gallery/207520059/Santander-Mensajes-Mayores",
-  "cover": {
-   "src": "/work/santander-mensajes-mayores/cover.webp",
-   "w": 808,
-   "h": 632
-  },
-  "credits": [
-   {
-    "role": "Redacción Creativa",
-    "names": "Paolo Pérez Ramos"
-   },
-   {
-    "role": "Dirección de Arte",
-    "names": "Paolo Pérez Ramos"
-   },
-   {
-    "role": "Edición de Video",
-    "names": "Luciana Tejería"
-   }
   ],
-  "awards": [
-   {
-    "medal": "Plata",
-    "festival": "Push The Power",
-    "jury": [
-     "Pablo Sena",
-     "Anthony Aquino",
-     "Victoria Dorregibus",
-     "Lara González"
-    ]
-   },
-   {
-    "medal": "Plata",
-    "festival": "Push The Power",
-    "jury": [
-     "Sofía Lemos",
-     "Germán Ferres",
-     "Paula Barceló",
-     "Deborah Buonomo",
-     "Guzmán Johnson"
-    ]
-   }
-  ],
-  "blocks": [
-   {
-    "type": "image",
-    "src": "/work/santander-mensajes-mayores/01.webp",
-    "w": 1400,
-    "h": 990
-   },
-   {
-    "type": "video",
-    "src": "https://www-ccv.adobe.io/v1/player/ccv/Dh8gu9Pi5iV/embed?api_key=behance1&bgcolor=%23191919",
-    "w": 600,
-    "h": 305
-   }
-  ]
+  "group": "pro"
  },
  {
   "slug": "coca-cola-potencia-tu-felicidad",
@@ -1147,7 +1091,73 @@
     "w": 1400,
     "h": 980
    }
-  ]
+  ],
+  "group": "pro"
+ },
+ {
+  "slug": "santander-mensajes-mayores",
+  "client": "Santander",
+  "title": "Mensajes Mayores",
+  "kind": "Idea alternativa",
+  "year": 2024,
+  "behance": "https://www.behance.net/gallery/207520059/Santander-Mensajes-Mayores",
+  "cover": {
+   "src": "/work/santander-mensajes-mayores/cover.webp",
+   "w": 808,
+   "h": 632
+  },
+  "credits": [
+   {
+    "role": "Redacción Creativa",
+    "names": "Paolo Pérez Ramos"
+   },
+   {
+    "role": "Dirección de Arte",
+    "names": "Paolo Pérez Ramos"
+   },
+   {
+    "role": "Edición de Video",
+    "names": "Luciana Tejería"
+   }
+  ],
+  "awards": [
+   {
+    "medal": "Plata",
+    "festival": "Push The Power",
+    "jury": [
+     "Pablo Sena",
+     "Anthony Aquino",
+     "Victoria Dorregibus",
+     "Lara González"
+    ]
+   },
+   {
+    "medal": "Plata",
+    "festival": "Push The Power",
+    "jury": [
+     "Sofía Lemos",
+     "Germán Ferres",
+     "Paula Barceló",
+     "Deborah Buonomo",
+     "Guzmán Johnson"
+    ]
+   }
+  ],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/santander-mensajes-mayores/01.webp",
+    "w": 1400,
+    "h": 990
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/Dh8gu9Pi5iV/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 305
+   }
+  ],
+  "group": "student"
  },
  {
   "slug": "volvo-ignition-phone-future-lions",
@@ -1187,7 +1197,8 @@
     "w": 1920,
     "h": 1080
    }
-  ]
+  ],
+  "group": "student"
  },
  {
   "slug": "falta-de-respeto",
@@ -1233,6 +1244,61 @@
     "w": 1400,
     "h": 357
    }
-  ]
+  ],
+  "group": "student"
+ },
+ {
+  "slug": "palabras-de-resistencia-amnistia-internacional",
+  "client": "Amnistía Internacional",
+  "title": "Palabras de resistencIA",
+  "kind": "Film",
+  "year": 2024,
+  "behance": "https://www.behance.net/gallery/212379975/Palabras-de-resistencIA-Amnistia-Internacional",
+  "cover": {
+   "src": "/work/palabras-de-resistencia-amnistia-internacional/cover.webp",
+   "w": 808,
+   "h": 633
+  },
+  "credits": [
+   {
+    "role": "Equipo",
+    "names": "Nicolas Varela, Francisco Belo, Paolo Perez Ramos, Juan Andrés Bevc Crosa"
+   }
+  ],
+  "awards": [
+   {
+    "medal": "Shortlist",
+    "festival": "El Ojo de Iberoamérica · Nuevos Talentos",
+    "jury": []
+   }
+  ],
+  "blocks": [
+   {
+    "type": "image",
+    "src": "/work/palabras-de-resistencia-amnistia-internacional/01.webp",
+    "w": 1400,
+    "h": 357
+   },
+   {
+    "type": "video",
+    "src": "https://www-ccv.adobe.io/v1/player/ccv/AtzRumta-j_/embed?api_key=behance1&bgcolor=%23191919",
+    "w": 600,
+    "h": 337
+   },
+   {
+    "type": "loop",
+    "src": "/work/palabras-de-resistencia-amnistia-internacional/02.mp4",
+    "poster": "/work/palabras-de-resistencia-amnistia-internacional/02.webp",
+    "w": 1200,
+    "h": 314
+   },
+   {
+    "type": "image",
+    "src": "/work/palabras-de-resistencia-amnistia-internacional/03.webp",
+    "w": 1400,
+    "h": 460
+   }
+  ],
+  "group": "student"
  }
 ]

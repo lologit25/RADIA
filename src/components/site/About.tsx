@@ -9,7 +9,7 @@ export function About() {
           <span className="tag rv">Sobre mí</span>
           <Words
             className="about-text"
-            text={`${profile.name} es redactor creativo en ${profile.company}, en ${profile.location}. Escribe campañas, films y gráficas para marcas como Pepsi, Pilsen, FIAT, Santander y Coca-Cola.`}
+            text={`${profile.name} es redactor creativo en ${profile.company}, en ${profile.location}. Trabajó en campañas para Pepsi, Pilsen, FIAT, Coca-Cola, Tigo Paraguay, INAVI y Bagno & Company.`}
           />
           <div className="rv">
             <GhostButton href="/#trabajos">Ver trabajos</GhostButton>

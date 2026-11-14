@@ -6,16 +6,12 @@ const disciplines = ["Redacción", "Campañas", "Film", "Gráfica", "Social", "M
 export function Disciplines({ index, total }: { index: number; total: number }) {
   return (
     <section className="disciplines" id="oficio">
-      <SectionHead index={index} total={total} label="Oficio" />
+      <SectionHead index={index} total={total} label="Disciplinas" />
       <div className="disciplines-grid">
         <div className="disciplines-copy">
-          <h2 className="rv">Escribo, pienso y bajo a tierra ideas para marcas grandes.</h2>
-          <p className="rv">
-            Films que se comentan en la sobremesa. Gráficas que no necesitan explicación. Campañas
-            que arrancan en un titular y terminan en la calle.
-          </p>
+          <h2 className="rv">Redacción creativa para campañas de film, gráfica, social y música.</h2>
           <div className="rv">
-            <GhostButton href={profile.behance}>Escribime</GhostButton>
+            <GhostButton href={profile.behance}>Contacto</GhostButton>
           </div>
         </div>
         <ul className="disciplines-list" data-focus>
