@@ -73,6 +73,9 @@ export function Motion() {
     const fills = Array.from(document.querySelectorAll<HTMLElement>("[data-fill]"));
     const focusLists = Array.from(document.querySelectorAll<HTMLElement>("[data-focus]"));
     const nav = document.querySelector<HTMLElement>("[data-nav]");
+    const hero = document.querySelector<HTMLElement>("[data-hero]");
+    const progress = document.querySelector<HTMLElement>("[data-progress]");
+    const drifts = Array.from(document.querySelectorAll<HTMLElement>("[data-drift]"));
 
     let queued = false;
     const update = () => {
@@ -80,6 +83,19 @@ export function Motion() {
       const vh = window.innerHeight;
 
       nav?.classList.toggle("is-scrolled", window.scrollY > 40);
+
+      const max = document.documentElement.scrollHeight - vh;
+      progress?.style.setProperty("--p", (max > 0 ? window.scrollY / max : 0).toFixed(4));
+      if (hero && !reduced) {
+        hero.style.setProperty("--exit", clamp(window.scrollY / (vh * 0.9)).toFixed(3));
+      }
+      if (!reduced) {
+        for (const el of drifts) {
+          const rect = el.getBoundingClientRect();
+          const offset = (rect.top + rect.height / 2 - vh / 2) / vh;
+          el.style.setProperty("--drift", clamp(offset, -1, 1).toFixed(3));
+        }
+      }
 
       for (const el of fills) {
         const rect = el.getBoundingClientRect();

@@ -23,8 +23,12 @@ export function Footer() {
         </a>
         <span>©{new Date().getFullYear()}</span>
       </div>
-      <p className="footer-word" aria-hidden="true">
-        paolo
+      <p className="footer-word rv" aria-hidden="true">
+        {"paolo".split("").map((letter, i) => (
+          <span key={i} style={{ transitionDelay: `${i * 70}ms` }}>
+            {letter}
+          </span>
+        ))}
       </p>
     </footer>
   );

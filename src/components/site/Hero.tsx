@@ -1,10 +1,12 @@
+import Image from "next/image";
+import { logos } from "@/lib/logos";
 import { clients, profile } from "@/lib/projects";
-import { InkPen } from "./InkPen";
+import { InkScene } from "./InkScene";
 
 export function Hero() {
   return (
-    <section className="hero">
-      <InkPen />
+    <section className="hero" data-hero>
+      <InkScene />
 
       <h1 className="hero-title">
         <span className="line">
@@ -26,9 +28,25 @@ export function Hero() {
           <div className="marquee-track">
             {[0, 1].map((copy) => (
               <ul key={copy} aria-hidden={copy === 1}>
-                {clients.map((client) => (
-                  <li key={client}>{client}</li>
-                ))}
+                {clients.map((client) => {
+                  const logo = logos[client];
+                  return (
+                    <li key={client}>
+                      {logo ? (
+                        <Image
+                          src={logo.src}
+                          alt={copy === 0 ? logo.name : ""}
+                          width={logo.w}
+                          height={logo.h}
+                          style={{ height: `calc(var(--logo-h) * ${logo.scale})` }}
+                          unoptimized
+                        />
+                      ) : (
+                        client
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             ))}
           </div>

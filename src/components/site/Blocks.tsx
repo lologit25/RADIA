@@ -54,7 +54,7 @@ export function Blocks({ blocks, title }: { blocks: Block[]; title: string }) {
           );
         }
         return (
-          <div key={i} className="block-media rv">
+          <div key={i} className="block-media rv" data-drift>
             <Still item={block} alt={title} sizes="(max-width: 1240px) 100vw, 1160px" />
           </div>
         );

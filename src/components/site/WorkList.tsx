@@ -39,6 +39,7 @@ export function WorkList({ items }: { items: Project[] }) {
           key={project.slug}
           href={`/work/${project.slug}`}
           className="work-row rv"
+          style={{ transitionDelay: `${Math.min(i, 6) * 60}ms` }}
           onPointerEnter={() => setActive(i)}
           onFocus={() => setActive(i)}
           onBlur={() => setActive(null)}
@@ -73,6 +74,7 @@ export function WorkList({ items }: { items: Project[] }) {
               className={active === i ? "is-on" : undefined}
             />
           ))}
+          <span className="work-preview-tag">Ver caso ↗</span>
         </div>
       </div>
     </div>

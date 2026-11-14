@@ -36,6 +36,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <div className="progress" data-progress aria-hidden="true" />
         <Motion />
         {children}
         <div className="grain" aria-hidden="true" />
