@@ -6,6 +6,11 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   // Override default ignores of eslint-config-next.
+  {
+    // Project pages are linked with plain anchors on purpose: Cloudflare loops on
+    // the "$" in the client-side navigation data files for dynamic routes.
+    rules: { "@next/next/no-html-link-for-pages": "off" },
+  },
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",

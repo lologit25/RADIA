@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { studentProjects } from "@/lib/projects";
 import { SectionHead, T } from "./Bits";
 
@@ -22,7 +21,7 @@ export function Student({ index, total }: { index: number; total: number }) {
         <ul className="student-list">
           {studentProjects.map((project) => (
             <li key={project.slug} className="rv">
-              <Link href={`/work/${project.slug}`} data-view>
+              <a href={`/work/${project.slug}/`} data-view>
                 <span className="student-thumb">
                   <Image
                     src={project.cover.src}
@@ -37,7 +36,7 @@ export function Student({ index, total }: { index: number; total: number }) {
                   {project.client ? `${project.client} · ` : ""}
                   {project.year}
                 </span>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

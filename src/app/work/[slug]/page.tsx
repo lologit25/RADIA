@@ -142,7 +142,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
           </div>
         </section>
 
-        <Link href={`/work/${next.slug}`} className="project-next">
+        <a href={`/work/${next.slug}/`} className="project-next">
           <span className="mono-note">
             <T es="Siguiente proyecto" en="Next project" />
           </span>
@@ -150,7 +150,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
             {next.title}
             <Arrow />
           </span>
-        </Link>
+        </a>
       </main>
       <Footer />
     </>

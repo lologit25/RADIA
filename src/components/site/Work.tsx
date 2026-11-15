@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { kindLabel, pad, proProjects } from "@/lib/projects";
 import { SectionHead, T } from "./Bits";
 
@@ -26,7 +25,7 @@ export function Work({ index, total }: { index: number; total: number }) {
       <ul className="work-grid">
         {proProjects.map((project, i) => (
           <li key={project.slug} className="rv" style={{ transitionDelay: `${(i % 3) * 90}ms` }}>
-            <Link href={`/work/${project.slug}`} className="work-card" data-view data-tilt>
+            <a href={`/work/${project.slug}/`} className="work-card" data-view data-tilt>
               <span className="work-card-media">
                 <Image
                   src={project.cover.src}
@@ -43,7 +42,7 @@ export function Work({ index, total }: { index: number; total: number }) {
                 </span>
                 <span className="work-card-title">{project.title}</span>
               </span>
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
