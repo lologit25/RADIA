@@ -71,7 +71,6 @@ export function About({ index, total }: { index: number; total: number }) {
 
           <div className="career">
             <CareerList label={<T es="Trayectoria" en="Experience" />} items={career.experience} />
-            <CareerList label={<T es="Educación" en="Education" />} items={career.education} />
           </div>
         </div>
       </div>
