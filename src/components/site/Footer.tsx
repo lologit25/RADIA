@@ -23,9 +23,6 @@ export function Footer() {
         <a href={profile.linkedin} target="_blank" rel="noreferrer">
           LinkedIn ↗
         </a>
-        <a href={profile.behance} target="_blank" rel="noreferrer">
-          Behance ↗
-        </a>
         <span>©{new Date().getFullYear()}</span>
       </div>
       <p className="footer-word rv" aria-hidden="true">

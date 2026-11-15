@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Cursor } from "@/components/site/Cursor";
 import { InkClicks } from "@/components/site/InkClicks";
+import { Loader } from "@/components/site/Loader";
 import { Motion } from "@/components/site/Motion";
 import "./globals.css";
 
@@ -42,6 +44,8 @@ export default function RootLayout({
         <Motion />
         {children}
         <InkClicks />
+        <Cursor />
+        <Loader />
         <div className="grain" aria-hidden="true" />
       </body>
     </html>

@@ -68,14 +68,16 @@ export function InkScene() {
       scene.environment = envTarget.texture;
 
       const plume = new THREE.MeshPhysicalMaterial({
-        color: 0x08090b,
-        roughness: 0.4,
-        metalness: 0.55,
-        iridescence: 1,
+        color: 0x0a0a0c,
+        roughness: 0.3,
+        metalness: 0.3,
+        clearcoat: 0.9,
+        clearcoatRoughness: 0.12,
+        iridescence: 0.3,
         iridescenceIOR: 1.5,
         iridescenceThicknessMinimum: 180,
         iridescenceThicknessMaximum: 420,
-        envMapIntensity: 3.1,
+        envMapIntensity: 3.3,
         side: THREE.DoubleSide,
       });
       const horn = new THREE.MeshPhysicalMaterial({
@@ -85,6 +87,15 @@ export function InkScene() {
         clearcoat: 1,
         clearcoatRoughness: 0.06,
         envMapIntensity: 1.8,
+      });
+      const sheet = new THREE.MeshPhysicalMaterial({
+        color: 0x050506,
+        roughness: 0.2,
+        metalness: 0,
+        clearcoat: 1,
+        clearcoatRoughness: 0.08,
+        envMapIntensity: 1.5,
+        side: THREE.DoubleSide,
       });
       const ink = new THREE.MeshPhysicalMaterial({
         color: 0x000000,
@@ -98,7 +109,7 @@ export function InkScene() {
       const rig = new THREE.Group();
       scene.add(rig);
 
-      const key = new THREE.DirectionalLight(0xffffff, 3.2);
+      const key = new THREE.DirectionalLight(0xffffff, 4.2);
       key.position.set(-3.5, 4, 6);
       scene.add(key);
       const rim = new THREE.DirectionalLight(0xa9d8f5, 4);
@@ -107,9 +118,9 @@ export function InkScene() {
 
       // ----- Feather quill (point down) -----
       const TILT = 0.62;
-      const SCALE = 1.27;
-      const ORIGIN_X = -0.25;
-      const ORIGIN_Y = 0.12;
+      const SCALE = 1.36;
+      const ORIGIN_X = -0.3;
+      const ORIGIN_Y = 0.22;
       const HALF = 2;
       const VANE_START = 0.2;
       const bow = (s: number) => 0.3 * s * s;
@@ -232,7 +243,7 @@ export function InkScene() {
 
       const BARBS = compact ? 300 : 440;
       for (const side of [1, -1]) {
-        const reach = side === 1 ? 0.86 : 0.6;
+        const reach = side === 1 ? 0.92 : 0.64;
         let clump = 0;
         let clumpLeft = 0;
         for (let i = 0; i < BARBS; i++) {
@@ -270,6 +281,31 @@ export function InkScene() {
           0.003,
         );
       }
+      // A glossy membrane under the barbs gives the vane broad, wet-looking reflections.
+      for (const side of [1, -1]) {
+        const reach = (side === 1 ? 0.92 : 0.64) * 0.84;
+        const ROWS = 150;
+        const COLS = 14;
+        const membrane = new THREE.PlaneGeometry(1, 1, COLS, ROWS);
+        const membranePosition = membrane.attributes.position;
+        for (let i = 0; i < membranePosition.count; i++) {
+          const u = membranePosition.getX(i) + 0.5;
+          const v = membranePosition.getY(i) + 0.5;
+          spine.getPointAt(VANE_START + v * (1 - VANE_START) * 0.995, centre);
+          const length = reach * Math.pow(Math.sin(Math.PI * Math.pow(v, 0.52)), 0.6);
+          const angle = 0.36 + v * 0.62 + 0.38 * u * u;
+          const distance = length * u;
+          membranePosition.setXYZ(
+            i,
+            centre.x + side * Math.cos(angle) * distance,
+            centre.y + Math.sin(angle) * distance + 0.38 * 0.12 * length * u * u,
+            -0.34 * distance * distance - 0.006,
+          );
+        }
+        membrane.computeVertexNormals();
+        spin.add(new THREE.Mesh(membrane, sheet));
+      }
+
       const vaneGeometry = new THREE.BufferGeometry();
       vaneGeometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
       vaneGeometry.setAttribute("normal", new THREE.Float32BufferAttribute(normals, 3));
@@ -441,7 +477,7 @@ export function InkScene() {
           const mesh = object as import("three").Mesh;
           mesh.geometry?.dispose();
         });
-        [plume, horn, ink].forEach((material) => material.dispose());
+        [plume, horn, sheet, ink].forEach((material) => material.dispose());
         renderer.dispose();
         renderer.domElement.remove();
       };

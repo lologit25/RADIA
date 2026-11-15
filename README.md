@@ -14,7 +14,9 @@ Portafolio de redacción creativa. Next.js 16 (App Router) + Tailwind v4, armado
   versión SVG (`InkPen.tsx`).
 - **Logos:** los de las marcas son los oficiales, convertidos a blanco (`public/logos/`). Pertenecen a
   sus respectivos dueños y se usan solo para identificar a los clientes.
-- **Trayectoria:** se edita en `src/data/career.json`.
+- **Trayectoria:** dentro de "Sobre mí"; se edita en `src/data/career.json`.
+- **Animación:** pantalla de carga (`Loader.tsx`), cortina entre páginas (`app/template.tsx`), cursor
+  (`Cursor.tsx`), banda deslizante (`Band.tsx`) y el resto en `Motion.tsx` + `globals.css`.
 - **Idiomas:** ES/EN con el componente `T` (`src/components/site/Bits.tsx`); el idioma elegido se guarda
   en el navegador.
 - **Tipografías:** Geist y Geist Mono, ambas de Google Fonts (`next/font/google`).

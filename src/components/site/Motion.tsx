@@ -76,6 +76,17 @@ export function Motion() {
     const hero = document.querySelector<HTMLElement>("[data-hero]");
     const progress = document.querySelector<HTMLElement>("[data-progress]");
     const drifts = Array.from(document.querySelectorAll<HTMLElement>("[data-drift]"));
+    const slides = Array.from(document.querySelectorAll<HTMLElement>("[data-slide]"));
+    let lastY = window.scrollY;
+
+    const onTilt = (event: PointerEvent) => {
+      const card = (event.target as Element).closest?.<HTMLElement>("[data-tilt]");
+      if (!card) return;
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty("--mx", ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3));
+      card.style.setProperty("--my", ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3));
+    };
+    if (!reduced) document.addEventListener("pointermove", onTilt, { passive: true });
 
     let queued = false;
     const update = () => {
@@ -83,6 +94,15 @@ export function Motion() {
       const vh = window.innerHeight;
 
       nav?.classList.toggle("is-scrolled", window.scrollY > 40);
+      const delta = window.scrollY - lastY;
+      if (Math.abs(delta) > 6) {
+        nav?.classList.toggle("is-hidden", delta > 0 && window.scrollY > vh * 0.6);
+        lastY = window.scrollY;
+      }
+      for (const el of slides) {
+        const rect = el.getBoundingClientRect();
+        el.style.setProperty("--slide", reduced ? "0" : clamp((vh - rect.top) / (vh + rect.height)).toFixed(4));
+      }
 
       const max = document.documentElement.scrollHeight - vh;
       progress?.style.setProperty("--p", (max > 0 ? window.scrollY / max : 0).toFixed(4));
@@ -129,6 +149,7 @@ export function Motion() {
       cancelAnimationFrame(raf);
       lenis?.destroy();
       document.removeEventListener("click", onAnchor, true);
+      document.removeEventListener("pointermove", onTilt);
       revealObserver.disconnect();
       loopObserver.disconnect();
       window.removeEventListener("scroll", onScroll);

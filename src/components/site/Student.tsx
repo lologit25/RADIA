@@ -22,7 +22,7 @@ export function Student({ index, total }: { index: number; total: number }) {
         <ul className="student-list">
           {studentProjects.map((project) => (
             <li key={project.slug} className="rv">
-              <Link href={`/work/${project.slug}`}>
+              <Link href={`/work/${project.slug}`} data-view>
                 <span className="student-thumb">
                   <Image
                     src={project.cover.src}

@@ -9,11 +9,16 @@ export function Work({ index, total }: { index: number; total: number }) {
       <div className="work-head">
         <SectionHead index={index} total={total} label={<T es="Trabajos" en="Work" />} />
         <div className="work-intro">
-          <h2 className="two-tone rv">
-            <T es="Trabajo profesional." en="Professional work." />
-            <br />
-            <span>
-              {pad(proProjects.length)} <T es="proyectos." en="projects." />
+          <h2 className="two-tone">
+            <span className="mask rv">
+              <span>
+                <T es="Trabajo profesional." en="Professional work." />
+              </span>
+            </span>
+            <span className="mask rv" style={{ transitionDelay: "120ms" }}>
+              <span className="dim">
+                {pad(proProjects.length)} <T es="proyectos." en="projects." />
+              </span>
             </span>
           </h2>
         </div>
@@ -21,7 +26,7 @@ export function Work({ index, total }: { index: number; total: number }) {
       <ul className="work-grid">
         {proProjects.map((project, i) => (
           <li key={project.slug} className="rv" style={{ transitionDelay: `${(i % 3) * 90}ms` }}>
-            <Link href={`/work/${project.slug}`} className="work-card">
+            <Link href={`/work/${project.slug}`} className="work-card" data-view data-tilt>
               <span className="work-card-media">
                 <Image
                   src={project.cover.src}
