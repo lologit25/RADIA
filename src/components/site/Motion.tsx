@@ -14,7 +14,8 @@ export function Motion() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Motion is part of the brief for this site, so it runs on every device.
+    const reduced = false;
 
     let lenis: Lenis | null = null;
     let raf = 0;

@@ -14,12 +14,19 @@ export function HeroFilm() {
     const stage = stageRef.current;
     const video = videoRef.current;
     if (!stage || !video) return;
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
-      video.pause();
-      return;
-    }
-    video.play().catch(() => undefined);
+    // iOS only autoplays a film that is muted and inline, and Low Power Mode
+    // blocks autoplay until the first touch, so start it again on that touch.
+    video.muted = true;
+    video.playsInline = true;
+    const start = () => video.play().catch(() => undefined);
+    start();
+    const onFirstTouch = () => {
+      start();
+      window.removeEventListener("pointerdown", onFirstTouch);
+      window.removeEventListener("touchstart", onFirstTouch);
+    };
+    window.addEventListener("pointerdown", onFirstTouch, { passive: true });
+    window.addEventListener("touchstart", onFirstTouch, { passive: true });
 
     const visibility = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) video.play().catch(() => undefined);
@@ -45,6 +52,8 @@ export function HeroFilm() {
     raf = requestAnimationFrame(tick);
 
     return () => {
+      window.removeEventListener("pointerdown", onFirstTouch);
+      window.removeEventListener("touchstart", onFirstTouch);
       visibility.disconnect();
       window.removeEventListener("pointermove", move);
       cancelAnimationFrame(raf);

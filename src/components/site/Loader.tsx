@@ -25,7 +25,7 @@ export function Loader() {
     } catch {
       // Without storage the loader simply plays on every full load.
     }
-    if (seen || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (seen) {
       finish();
       return;
     }

@@ -22,7 +22,6 @@ export function InkClicks() {
     const canvas = canvasRef.current;
     const context = canvas?.getContext("2d");
     if (!canvas || !context) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let blots: Blot[] = [];
     let raf = 0;
