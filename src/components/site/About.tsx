@@ -37,7 +37,15 @@ export function About({ index, total }: { index: number; total: number }) {
                   <span className="career-period">
                     <T es={item.period.es} en={item.period.en} />
                   </span>
-                  <span className="career-place">{item.place}</span>
+                  <span className="career-place">
+                    {item.place}
+                    {item.current && (
+                      <span className="career-now">
+                        <i />
+                        <T es="Puesto actual" en="Current role" />
+                      </span>
+                    )}
+                  </span>
                   <span className="career-role">
                     <b>
                       <T es={item.role.es} en={item.role.en} />

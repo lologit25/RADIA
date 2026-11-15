@@ -681,6 +681,36 @@ html:not(.js) .career-list li::after {
   color: var(--ink);
 }
 
+.career-now {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 12px;
+  padding: 4px 8px 3px;
+  border-radius: 3px;
+  background: var(--accent-ink);
+  color: var(--accent);
+  font: 600 10px/12px var(--mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.career-now i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: now-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes now-pulse {
+  50% {
+    opacity: 0.25;
+  }
+}
+
 .career-role {
   display: flex;
   flex-direction: column;

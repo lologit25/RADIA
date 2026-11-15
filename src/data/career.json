@@ -1,14 +1,28 @@
 [
   {
-    "period": { "es": "2024 — Hoy", "en": "2024 — Now" },
+    "period": {
+      "es": "2024 — Hoy",
+      "en": "2024 — Now"
+    },
     "place": "Publicis Ímpetu",
-    "role": { "es": "Redactor creativo", "en": "Creative copywriter" },
-    "location": "Montevideo, Uruguay"
+    "role": {
+      "es": "Redactor creativo",
+      "en": "Creative copywriter"
+    },
+    "location": "Montevideo, Uruguay",
+    "current": true
   },
   {
-    "period": { "es": "Formación", "en": "Education" },
+    "period": {
+      "es": "Formación",
+      "en": "Education"
+    },
     "place": "Brother Escuela de Creativos",
-    "role": { "es": "Creatividad publicitaria", "en": "Advertising creativity" },
-    "location": "Montevideo, Uruguay"
+    "role": {
+      "es": "Creatividad publicitaria",
+      "en": "Advertising creativity"
+    },
+    "location": "Montevideo, Uruguay",
+    "current": false
   }
 ]
