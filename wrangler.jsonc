@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers static hosting: `npm run build` writes the site to ./out
+  // and `npx wrangler deploy` uploads that folder.
+  "name": "radia",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

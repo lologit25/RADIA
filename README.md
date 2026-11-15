@@ -39,11 +39,15 @@ src/lib/projects.ts           # Tipos + perfil
 docs/research/withhoney/      # Notas de la referencia
 ```
 
-## Publicar en Cloudflare Pages (gratis)
+## Publicar en Cloudflare (gratis)
 
-El sitio se exporta como archivos estáticos en la carpeta `out`.
+El sitio se exporta como archivos estáticos en la carpeta `out`; `wrangler.jsonc` le indica a Cloudflare
+que publique esa carpeta.
 
-1. En dash.cloudflare.com: **Workers & Pages → Create → Pages → Connect to Git** y elegir este repositorio.
-2. Rama de producción: la que se quiera publicar.
-3. Build command: `npm run build` · Build output directory: `out`.
-4. Deploy. Cloudflare da una dirección `*.pages.dev` y vuelve a publicar con cada push.
+En el proyecto de Cloudflare (**Settings → Build**):
+
+- Branch: la rama que se quiera publicar.
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+
+El campo `name` de `wrangler.jsonc` tiene que coincidir con el nombre del proyecto en Cloudflare.
