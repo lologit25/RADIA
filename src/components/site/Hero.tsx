@@ -13,14 +13,16 @@ export function Hero() {
 
       <h1 className="hero-title">
         <span className="line">
-          <span>Paolo Pérez Ramos,</span>
-        </span>
-        <span className="line">
-          <span>
-            <T es="redactor creativo." en="creative copywriter." />
-          </span>
+          <span>Paolo Pérez Ramos</span>
         </span>
       </h1>
+      <p className="hero-role">
+        <span className="line">
+          <span>
+            <T es="Redactor creativo" en="Creative copywriter" />
+          </span>
+        </span>
+      </p>
 
       <p className="hero-meta">
         <span>{profile.company}</span>
