@@ -608,6 +608,16 @@ html.js:not(.is-loaded) .ink-film {
   letter-spacing: -0.02em;
 }
 
+.career {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(44px, 5vw, 72px);
+}
+
+.career-role {
+  max-width: 240px;
+}
+
 .career-label {
   display: flex;
   align-items: center;

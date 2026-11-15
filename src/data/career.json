@@ -1,30 +1,86 @@
-[
-  {
-    "period": { "es": "Oct 2024 — Hoy", "en": "Oct 2024 — Now" },
-    "place": "Publicis Ímpetu",
-    "role": { "es": "Redactor creativo", "en": "Creative copywriter" },
-    "location": "Montevideo, Uruguay",
-    "current": true
-  },
-  {
-    "period": { "es": "Jun — Oct 2024", "en": "Jun — Oct 2024" },
-    "place": "PIMOD",
-    "role": { "es": "Social Media Manager", "en": "Social Media Manager" },
-    "location": "Montevideo, Uruguay",
-    "current": false
-  },
-  {
-    "period": { "es": "Ene — Jun 2024", "en": "Jan — Jun 2024" },
-    "place": "Amén McCann",
-    "role": { "es": "Social Media Manager", "en": "Social Media Manager" },
-    "location": "Montevideo, Uruguay",
-    "current": false
-  },
-  {
-    "period": { "es": "Formación", "en": "Education" },
-    "place": "Brother Escuela de Creativos",
-    "role": { "es": "Creatividad publicitaria", "en": "Advertising creativity" },
-    "location": "Montevideo, Uruguay",
-    "current": false
-  }
-]
+{
+  "experience": [
+    {
+      "period": {
+        "es": "Oct 2024 — Hoy",
+        "en": "Oct 2024 — Now"
+      },
+      "place": "Publicis Ímpetu",
+      "role": {
+        "es": "Redactor creativo",
+        "en": "Creative copywriter"
+      },
+      "location": "Montevideo, Uruguay",
+      "badge": {
+        "es": "Puesto actual",
+        "en": "Current role"
+      }
+    },
+    {
+      "period": {
+        "es": "Jun — Oct 2024",
+        "en": "Jun — Oct 2024"
+      },
+      "place": "PIMOD",
+      "role": {
+        "es": "Social Media Manager",
+        "en": "Social Media Manager"
+      },
+      "location": "Montevideo, Uruguay"
+    },
+    {
+      "period": {
+        "es": "Ene — Jun 2024",
+        "en": "Jan — Jun 2024"
+      },
+      "place": "Amén McCann",
+      "role": {
+        "es": "Social Media Manager",
+        "en": "Social Media Manager"
+      },
+      "location": "Montevideo, Uruguay"
+    }
+  ],
+  "education": [
+    {
+      "period": {
+        "es": "2026 — 2028",
+        "en": "2026 — 2028"
+      },
+      "place": "Universidad ORT Uruguay",
+      "role": {
+        "es": "Master en Marketing y Dirección Comercial",
+        "en": "Master's in Marketing and Commercial Management"
+      },
+      "location": "Montevideo, Uruguay",
+      "badge": {
+        "es": "En curso",
+        "en": "In progress"
+      }
+    },
+    {
+      "period": {
+        "es": "2020 — 2024",
+        "en": "2020 — 2024"
+      },
+      "place": "Universidad de la República",
+      "role": {
+        "es": "Licenciado en Comunicación, Publicidad",
+        "en": "Bachelor's in Communication, Advertising"
+      },
+      "location": "Montevideo, Uruguay"
+    },
+    {
+      "period": {
+        "es": "Abr — Dic 2024",
+        "en": "Apr — Dec 2024"
+      },
+      "place": "Brother Escuela de Creativos",
+      "role": {
+        "es": "Redacción creativa",
+        "en": "Creative writing"
+      },
+      "location": "Montevideo, Uruguay"
+    }
+  ]
+}

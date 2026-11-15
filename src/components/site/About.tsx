@@ -2,6 +2,49 @@ import career from "@/data/career.json";
 import { profile } from "@/lib/projects";
 import { GhostButton, SectionHead, T, Words } from "./Bits";
 
+interface CareerItem {
+  period: { es: string; en: string };
+  place: string;
+  role: { es: string; en: string };
+  location: string;
+  badge?: { es: string; en: string };
+}
+
+function CareerList({ label, items }: { label: React.ReactNode; items: CareerItem[] }) {
+  return (
+    <div className="career-block">
+      <p className="career-label rv">
+        <i />
+        {label}
+      </p>
+      <ol className="career-list">
+        {items.map((item, i) => (
+          <li key={item.place} className="rv" style={{ transitionDelay: `${i * 120}ms` }}>
+            <span className="career-period">
+              <T es={item.period.es} en={item.period.en} />
+            </span>
+            <span className="career-place">
+              {item.place}
+              {item.badge && (
+                <span className="career-now">
+                  <i />
+                  <T es={item.badge.es} en={item.badge.en} />
+                </span>
+              )}
+            </span>
+            <span className="career-role">
+              <b>
+                <T es={item.role.es} en={item.role.en} />
+              </b>
+              <span>{item.location}</span>
+            </span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 export function About({ index, total }: { index: number; total: number }) {
   return (
     <section className="about" id="sobre-mi">
@@ -27,34 +70,8 @@ export function About({ index, total }: { index: number; total: number }) {
           </div>
 
           <div className="career">
-            <p className="career-label rv">
-              <i />
-              <T es="Trayectoria" en="Experience" />
-            </p>
-            <ol className="career-list">
-              {career.map((item, i) => (
-                <li key={item.place} className="rv" style={{ transitionDelay: `${i * 120}ms` }}>
-                  <span className="career-period">
-                    <T es={item.period.es} en={item.period.en} />
-                  </span>
-                  <span className="career-place">
-                    {item.place}
-                    {item.current && (
-                      <span className="career-now">
-                        <i />
-                        <T es="Puesto actual" en="Current role" />
-                      </span>
-                    )}
-                  </span>
-                  <span className="career-role">
-                    <b>
-                      <T es={item.role.es} en={item.role.en} />
-                    </b>
-                    <span>{item.location}</span>
-                  </span>
-                </li>
-              ))}
-            </ol>
+            <CareerList label={<T es="Trayectoria" en="Experience" />} items={career.experience} />
+            <CareerList label={<T es="Educación" en="Education" />} items={career.education} />
           </div>
         </div>
       </div>
