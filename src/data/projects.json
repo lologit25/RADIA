@@ -7,7 +7,7 @@
   "year": 2026,
   "behance": "https://www.behance.net/gallery/250513207/El-Representante-del-Hincha-Pepsi",
   "cover": {
-   "src": "/work/el-representante-del-hincha-pepsi/cover.webp",
+   "src": "/media/el-representante-del-hincha-pepsi/cover.webp",
    "w": 1254,
    "h": 980
   },
@@ -37,7 +37,7 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/el-representante-del-hincha-pepsi/01.webp",
+    "src": "/media/el-representante-del-hincha-pepsi/01.webp",
     "w": 1400,
     "h": 788
    },
@@ -52,22 +52,22 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/el-representante-del-hincha-pepsi/02.mp4",
-      "poster": "/work/el-representante-del-hincha-pepsi/02.webp",
+      "src": "/media/el-representante-del-hincha-pepsi/02.mp4",
+      "poster": "/media/el-representante-del-hincha-pepsi/02.webp",
       "w": 480,
       "h": 480
      },
      {
       "type": "loop",
-      "src": "/work/el-representante-del-hincha-pepsi/03.mp4",
-      "poster": "/work/el-representante-del-hincha-pepsi/03.webp",
+      "src": "/media/el-representante-del-hincha-pepsi/03.mp4",
+      "poster": "/media/el-representante-del-hincha-pepsi/03.webp",
       "w": 480,
       "h": 480
      },
      {
       "type": "loop",
-      "src": "/work/el-representante-del-hincha-pepsi/04.mp4",
-      "poster": "/work/el-representante-del-hincha-pepsi/04.webp",
+      "src": "/media/el-representante-del-hincha-pepsi/04.mp4",
+      "poster": "/media/el-representante-del-hincha-pepsi/04.webp",
       "w": 480,
       "h": 480
      }
@@ -87,7 +87,7 @@
    },
    {
     "type": "image",
-    "src": "/work/el-representante-del-hincha-pepsi/05.webp",
+    "src": "/media/el-representante-del-hincha-pepsi/05.webp",
     "w": 1170,
     "h": 1463
    },
@@ -105,7 +105,7 @@
    },
    {
     "type": "image",
-    "src": "/work/el-representante-del-hincha-pepsi/06.webp",
+    "src": "/media/el-representante-del-hincha-pepsi/06.webp",
     "w": 1170,
     "h": 1464
    },
@@ -129,7 +129,7 @@
    },
    {
     "type": "image",
-    "src": "/work/el-representante-del-hincha-pepsi/07.webp",
+    "src": "/media/el-representante-del-hincha-pepsi/07.webp",
     "w": 1170,
     "h": 1463
    },
@@ -162,7 +162,7 @@
   "year": 2025,
   "behance": "https://www.behance.net/gallery/236506053/Pilsen-Tercer-Tiempo",
   "cover": {
-   "src": "/work/pilsen-tercer-tiempo/cover.webp",
+   "src": "/media/pilsen-tercer-tiempo/cover.webp",
    "w": 808,
    "h": 632
   },
@@ -196,7 +196,7 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/pilsen-tercer-tiempo/01.webp",
+    "src": "/media/pilsen-tercer-tiempo/01.webp",
     "w": 1000,
     "h": 72
    },
@@ -211,22 +211,22 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/02.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/02.webp",
+      "src": "/media/pilsen-tercer-tiempo/02.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/02.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/03.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/03.webp",
+      "src": "/media/pilsen-tercer-tiempo/03.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/03.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/04.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/04.webp",
+      "src": "/media/pilsen-tercer-tiempo/04.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/04.webp",
       "w": 426,
       "h": 240
      }
@@ -243,22 +243,22 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/05.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/05.webp",
+      "src": "/media/pilsen-tercer-tiempo/05.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/05.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/06.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/06.webp",
+      "src": "/media/pilsen-tercer-tiempo/06.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/06.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/07.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/07.webp",
+      "src": "/media/pilsen-tercer-tiempo/07.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/07.webp",
       "w": 426,
       "h": 240
      }
@@ -275,22 +275,22 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/08.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/08.webp",
+      "src": "/media/pilsen-tercer-tiempo/08.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/08.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/09.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/09.webp",
+      "src": "/media/pilsen-tercer-tiempo/09.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/09.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/10.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/10.webp",
+      "src": "/media/pilsen-tercer-tiempo/10.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/10.webp",
       "w": 426,
       "h": 240
      }
@@ -307,22 +307,22 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/11.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/11.webp",
+      "src": "/media/pilsen-tercer-tiempo/11.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/11.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/12.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/12.webp",
+      "src": "/media/pilsen-tercer-tiempo/12.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/12.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/13.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/13.webp",
+      "src": "/media/pilsen-tercer-tiempo/13.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/13.webp",
       "w": 426,
       "h": 240
      }
@@ -339,22 +339,22 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/14.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/14.webp",
+      "src": "/media/pilsen-tercer-tiempo/14.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/14.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/15.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/15.webp",
+      "src": "/media/pilsen-tercer-tiempo/15.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/15.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/16.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/16.webp",
+      "src": "/media/pilsen-tercer-tiempo/16.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/16.webp",
       "w": 426,
       "h": 240
      }
@@ -371,22 +371,22 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/17.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/17.webp",
+      "src": "/media/pilsen-tercer-tiempo/17.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/17.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/18.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/18.webp",
+      "src": "/media/pilsen-tercer-tiempo/18.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/18.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/pilsen-tercer-tiempo/19.mp4",
-      "poster": "/work/pilsen-tercer-tiempo/19.webp",
+      "src": "/media/pilsen-tercer-tiempo/19.mp4",
+      "poster": "/media/pilsen-tercer-tiempo/19.webp",
       "w": 426,
       "h": 240
      }
@@ -400,7 +400,7 @@
    },
    {
     "type": "image",
-    "src": "/work/pilsen-tercer-tiempo/20.webp",
+    "src": "/media/pilsen-tercer-tiempo/20.webp",
     "w": 1400,
     "h": 226
    },
@@ -412,7 +412,7 @@
    },
    {
     "type": "image",
-    "src": "/work/pilsen-tercer-tiempo/21.webp",
+    "src": "/media/pilsen-tercer-tiempo/21.webp",
     "w": 1400,
     "h": 226
    },
@@ -424,13 +424,13 @@
    },
    {
     "type": "image",
-    "src": "/work/pilsen-tercer-tiempo/22.webp",
+    "src": "/media/pilsen-tercer-tiempo/22.webp",
     "w": 1000,
     "h": 72
    },
    {
     "type": "image",
-    "src": "/work/pilsen-tercer-tiempo/23.webp",
+    "src": "/media/pilsen-tercer-tiempo/23.webp",
     "w": 1000,
     "h": 72
    }
@@ -445,7 +445,7 @@
   "year": 2025,
   "behance": "https://www.behance.net/gallery/221284583/INAVI-Musica-Sostenible",
   "cover": {
-   "src": "/work/inavi-musica-sostenible/cover.webp",
+   "src": "/media/inavi-musica-sostenible/cover.webp",
    "w": 1294,
    "h": 1012
   },
@@ -479,8 +479,8 @@
   "blocks": [
    {
     "type": "loop",
-    "src": "/work/inavi-musica-sostenible/01.mp4",
-    "poster": "/work/inavi-musica-sostenible/01.webp",
+    "src": "/media/inavi-musica-sostenible/01.mp4",
+    "poster": "/media/inavi-musica-sostenible/01.webp",
     "w": 1200,
     "h": 292
    },
@@ -489,36 +489,36 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/02.mp4",
-      "poster": "/work/inavi-musica-sostenible/02.webp",
+      "src": "/media/inavi-musica-sostenible/02.mp4",
+      "poster": "/media/inavi-musica-sostenible/02.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/03.mp4",
-      "poster": "/work/inavi-musica-sostenible/03.webp",
+      "src": "/media/inavi-musica-sostenible/03.mp4",
+      "poster": "/media/inavi-musica-sostenible/03.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/04.mp4",
-      "poster": "/work/inavi-musica-sostenible/04.webp",
+      "src": "/media/inavi-musica-sostenible/04.mp4",
+      "poster": "/media/inavi-musica-sostenible/04.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/05.mp4",
-      "poster": "/work/inavi-musica-sostenible/05.webp",
+      "src": "/media/inavi-musica-sostenible/05.mp4",
+      "poster": "/media/inavi-musica-sostenible/05.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/06.mp4",
-      "poster": "/work/inavi-musica-sostenible/06.webp",
+      "src": "/media/inavi-musica-sostenible/06.mp4",
+      "poster": "/media/inavi-musica-sostenible/06.webp",
       "w": 426,
       "h": 240
      }
@@ -535,36 +535,36 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/07.mp4",
-      "poster": "/work/inavi-musica-sostenible/07.webp",
+      "src": "/media/inavi-musica-sostenible/07.mp4",
+      "poster": "/media/inavi-musica-sostenible/07.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/08.mp4",
-      "poster": "/work/inavi-musica-sostenible/08.webp",
+      "src": "/media/inavi-musica-sostenible/08.mp4",
+      "poster": "/media/inavi-musica-sostenible/08.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/09.mp4",
-      "poster": "/work/inavi-musica-sostenible/09.webp",
+      "src": "/media/inavi-musica-sostenible/09.mp4",
+      "poster": "/media/inavi-musica-sostenible/09.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/10.mp4",
-      "poster": "/work/inavi-musica-sostenible/10.webp",
+      "src": "/media/inavi-musica-sostenible/10.mp4",
+      "poster": "/media/inavi-musica-sostenible/10.webp",
       "w": 426,
       "h": 240
      },
      {
       "type": "loop",
-      "src": "/work/inavi-musica-sostenible/11.mp4",
-      "poster": "/work/inavi-musica-sostenible/11.webp",
+      "src": "/media/inavi-musica-sostenible/11.mp4",
+      "poster": "/media/inavi-musica-sostenible/11.webp",
       "w": 426,
       "h": 240
      }
@@ -572,8 +572,8 @@
    },
    {
     "type": "loop",
-    "src": "/work/inavi-musica-sostenible/12.mp4",
-    "poster": "/work/inavi-musica-sostenible/12.webp",
+    "src": "/media/inavi-musica-sostenible/12.mp4",
+    "poster": "/media/inavi-musica-sostenible/12.webp",
     "w": 1200,
     "h": 292
    }
@@ -588,7 +588,7 @@
   "year": 2025,
   "behance": "https://www.behance.net/gallery/221279595/Bagno-Company-Conveniencia-Real",
   "cover": {
-   "src": "/work/bagno-company-conveniencia-real/cover.webp",
+   "src": "/media/bagno-company-conveniencia-real/cover.webp",
    "w": 1294,
    "h": 1012
   },
@@ -618,8 +618,8 @@
   "blocks": [
    {
     "type": "loop",
-    "src": "/work/bagno-company-conveniencia-real/01.mp4",
-    "poster": "/work/bagno-company-conveniencia-real/01.webp",
+    "src": "/media/bagno-company-conveniencia-real/01.mp4",
+    "poster": "/media/bagno-company-conveniencia-real/01.webp",
     "w": 1200,
     "h": 292
    },
@@ -628,29 +628,29 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/bagno-company-conveniencia-real/02.mp4",
-      "poster": "/work/bagno-company-conveniencia-real/02.webp",
+      "src": "/media/bagno-company-conveniencia-real/02.mp4",
+      "poster": "/media/bagno-company-conveniencia-real/02.webp",
       "w": 600,
       "h": 600
      },
      {
       "type": "loop",
-      "src": "/work/bagno-company-conveniencia-real/03.mp4",
-      "poster": "/work/bagno-company-conveniencia-real/03.webp",
+      "src": "/media/bagno-company-conveniencia-real/03.mp4",
+      "poster": "/media/bagno-company-conveniencia-real/03.webp",
       "w": 600,
       "h": 600
      },
      {
       "type": "loop",
-      "src": "/work/bagno-company-conveniencia-real/04.mp4",
-      "poster": "/work/bagno-company-conveniencia-real/04.webp",
+      "src": "/media/bagno-company-conveniencia-real/04.mp4",
+      "poster": "/media/bagno-company-conveniencia-real/04.webp",
       "w": 600,
       "h": 600
      },
      {
       "type": "loop",
-      "src": "/work/bagno-company-conveniencia-real/05.mp4",
-      "poster": "/work/bagno-company-conveniencia-real/05.webp",
+      "src": "/media/bagno-company-conveniencia-real/05.mp4",
+      "poster": "/media/bagno-company-conveniencia-real/05.webp",
       "w": 600,
       "h": 600
      }
@@ -667,29 +667,29 @@
     "items": [
      {
       "type": "loop",
-      "src": "/work/bagno-company-conveniencia-real/06.mp4",
-      "poster": "/work/bagno-company-conveniencia-real/06.webp",
+      "src": "/media/bagno-company-conveniencia-real/06.mp4",
+      "poster": "/media/bagno-company-conveniencia-real/06.webp",
       "w": 600,
       "h": 600
      },
      {
       "type": "loop",
-      "src": "/work/bagno-company-conveniencia-real/07.mp4",
-      "poster": "/work/bagno-company-conveniencia-real/07.webp",
+      "src": "/media/bagno-company-conveniencia-real/07.mp4",
+      "poster": "/media/bagno-company-conveniencia-real/07.webp",
       "w": 600,
       "h": 600
      },
      {
       "type": "loop",
-      "src": "/work/bagno-company-conveniencia-real/08.mp4",
-      "poster": "/work/bagno-company-conveniencia-real/08.webp",
+      "src": "/media/bagno-company-conveniencia-real/08.mp4",
+      "poster": "/media/bagno-company-conveniencia-real/08.webp",
       "w": 600,
       "h": 600
      },
      {
       "type": "loop",
-      "src": "/work/bagno-company-conveniencia-real/09.mp4",
-      "poster": "/work/bagno-company-conveniencia-real/09.webp",
+      "src": "/media/bagno-company-conveniencia-real/09.mp4",
+      "poster": "/media/bagno-company-conveniencia-real/09.webp",
       "w": 600,
       "h": 600
      }
@@ -697,8 +697,8 @@
    },
    {
     "type": "loop",
-    "src": "/work/bagno-company-conveniencia-real/10.mp4",
-    "poster": "/work/bagno-company-conveniencia-real/10.webp",
+    "src": "/media/bagno-company-conveniencia-real/10.mp4",
+    "poster": "/media/bagno-company-conveniencia-real/10.webp",
     "w": 1200,
     "h": 292
    }
@@ -713,7 +713,7 @@
   "year": 2025,
   "behance": "https://www.behance.net/gallery/237827155/No-funcionan-igual-FIAT",
   "cover": {
-   "src": "/work/no-funcionan-igual-fiat/cover.webp",
+   "src": "/media/no-funcionan-igual-fiat/cover.webp",
    "w": 1084,
    "h": 848
   },
@@ -751,19 +751,19 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/no-funcionan-igual-fiat/01.webp",
+    "src": "/media/no-funcionan-igual-fiat/01.webp",
     "w": 1400,
     "h": 788
    },
    {
     "type": "image",
-    "src": "/work/no-funcionan-igual-fiat/02.webp",
+    "src": "/media/no-funcionan-igual-fiat/02.webp",
     "w": 1400,
     "h": 788
    },
    {
     "type": "image",
-    "src": "/work/no-funcionan-igual-fiat/03.webp",
+    "src": "/media/no-funcionan-igual-fiat/03.webp",
     "w": 1400,
     "h": 788
    }
@@ -778,7 +778,7 @@
   "year": 2025,
   "behance": "https://www.behance.net/gallery/241022171/Pepsi-70-ANOS-CON-SED-DE-MAS",
   "cover": {
-   "src": "/work/pepsi-70-anos-con-sed-de-mas/cover.webp",
+   "src": "/media/pepsi-70-anos-con-sed-de-mas/cover.webp",
    "w": 808,
    "h": 632
   },
@@ -816,8 +816,8 @@
   "blocks": [
    {
     "type": "loop",
-    "src": "/work/pepsi-70-anos-con-sed-de-mas/01.mp4",
-    "poster": "/work/pepsi-70-anos-con-sed-de-mas/01.webp",
+    "src": "/media/pepsi-70-anos-con-sed-de-mas/01.mp4",
+    "poster": "/media/pepsi-70-anos-con-sed-de-mas/01.webp",
     "w": 1200,
     "h": 300
    },
@@ -841,8 +841,8 @@
    },
    {
     "type": "loop",
-    "src": "/work/pepsi-70-anos-con-sed-de-mas/02.mp4",
-    "poster": "/work/pepsi-70-anos-con-sed-de-mas/02.webp",
+    "src": "/media/pepsi-70-anos-con-sed-de-mas/02.mp4",
+    "poster": "/media/pepsi-70-anos-con-sed-de-mas/02.webp",
     "w": 1200,
     "h": 300
    }
@@ -857,7 +857,7 @@
   "year": 2025,
   "behance": "https://www.behance.net/gallery/239629137/Pepsi-70-ANOS-EN-URUGUAY-CON-SED-DE-MAS",
   "cover": {
-   "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/cover.webp",
+   "src": "/media/pepsi-70-anos-en-uruguay-con-sed-de-mas/cover.webp",
    "w": 1264,
    "h": 988
   },
@@ -895,7 +895,7 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/01.webp",
+    "src": "/media/pepsi-70-anos-en-uruguay-con-sed-de-mas/01.webp",
     "w": 1400,
     "h": 788
    },
@@ -904,19 +904,19 @@
     "items": [
      {
       "type": "image",
-      "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/02.webp",
+      "src": "/media/pepsi-70-anos-en-uruguay-con-sed-de-mas/02.webp",
       "w": 1400,
       "h": 1120
      },
      {
       "type": "image",
-      "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/03.webp",
+      "src": "/media/pepsi-70-anos-en-uruguay-con-sed-de-mas/03.webp",
       "w": 1400,
       "h": 1120
      },
      {
       "type": "image",
-      "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/04.webp",
+      "src": "/media/pepsi-70-anos-en-uruguay-con-sed-de-mas/04.webp",
       "w": 1400,
       "h": 1120
      }
@@ -924,19 +924,19 @@
    },
    {
     "type": "image",
-    "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/05.webp",
+    "src": "/media/pepsi-70-anos-en-uruguay-con-sed-de-mas/05.webp",
     "w": 1400,
     "h": 1120
    },
    {
     "type": "image",
-    "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/06.webp",
+    "src": "/media/pepsi-70-anos-en-uruguay-con-sed-de-mas/06.webp",
     "w": 1400,
     "h": 1120
    },
    {
     "type": "image",
-    "src": "/work/pepsi-70-anos-en-uruguay-con-sed-de-mas/07.webp",
+    "src": "/media/pepsi-70-anos-en-uruguay-con-sed-de-mas/07.webp",
     "w": 1400,
     "h": 1120
    }
@@ -951,7 +951,7 @@
   "year": 2025,
   "behance": "https://www.behance.net/gallery/239046711/Tigo-Paraguay-Se-enciende-nuestra-historia",
   "cover": {
-   "src": "/work/tigo-paraguay-se-enciende-nuestra-historia/cover.webp",
+   "src": "/media/tigo-paraguay-se-enciende-nuestra-historia/cover.webp",
    "w": 1294,
    "h": 1012
   },
@@ -981,7 +981,7 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/tigo-paraguay-se-enciende-nuestra-historia/01.webp",
+    "src": "/media/tigo-paraguay-se-enciende-nuestra-historia/01.webp",
     "w": 1400,
     "h": 466
    },
@@ -1002,7 +1002,7 @@
   "year": 2024,
   "behance": "https://www.behance.net/gallery/207680167/Coca-Cola-Potencia-tu-felicidad",
   "cover": {
-   "src": "/work/coca-cola-potencia-tu-felicidad/cover.webp",
+   "src": "/media/coca-cola-potencia-tu-felicidad/cover.webp",
    "w": 808,
    "h": 632
   },
@@ -1052,7 +1052,7 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/coca-cola-potencia-tu-felicidad/01.webp",
+    "src": "/media/coca-cola-potencia-tu-felicidad/01.webp",
     "w": 1400,
     "h": 990
    },
@@ -1061,19 +1061,19 @@
     "items": [
      {
       "type": "image",
-      "src": "/work/coca-cola-potencia-tu-felicidad/02.webp",
+      "src": "/media/coca-cola-potencia-tu-felicidad/02.webp",
       "w": 1400,
       "h": 1980
      },
      {
       "type": "image",
-      "src": "/work/coca-cola-potencia-tu-felicidad/03.webp",
+      "src": "/media/coca-cola-potencia-tu-felicidad/03.webp",
       "w": 1400,
       "h": 1980
      },
      {
       "type": "image",
-      "src": "/work/coca-cola-potencia-tu-felicidad/04.webp",
+      "src": "/media/coca-cola-potencia-tu-felicidad/04.webp",
       "w": 1400,
       "h": 1980
      }
@@ -1081,13 +1081,13 @@
    },
    {
     "type": "image",
-    "src": "/work/coca-cola-potencia-tu-felicidad/05.webp",
+    "src": "/media/coca-cola-potencia-tu-felicidad/05.webp",
     "w": 1400,
     "h": 933
    },
    {
     "type": "image",
-    "src": "/work/coca-cola-potencia-tu-felicidad/06.webp",
+    "src": "/media/coca-cola-potencia-tu-felicidad/06.webp",
     "w": 1400,
     "h": 980
    }
@@ -1102,7 +1102,7 @@
   "year": 2024,
   "behance": "https://www.behance.net/gallery/207520059/Santander-Mensajes-Mayores",
   "cover": {
-   "src": "/work/santander-mensajes-mayores/cover.webp",
+   "src": "/media/santander-mensajes-mayores/cover.webp",
    "w": 808,
    "h": 632
   },
@@ -1146,7 +1146,7 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/santander-mensajes-mayores/01.webp",
+    "src": "/media/santander-mensajes-mayores/01.webp",
     "w": 1400,
     "h": 990
    },
@@ -1167,7 +1167,7 @@
   "year": 2025,
   "behance": "https://www.behance.net/gallery/223578437/Volvo-Ignition-Phone-Future-Lions",
   "cover": {
-   "src": "/work/volvo-ignition-phone-future-lions/cover.webp",
+   "src": "/media/volvo-ignition-phone-future-lions/cover.webp",
    "w": 1007,
    "h": 788
   },
@@ -1181,13 +1181,13 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/volvo-ignition-phone-future-lions/01.webp",
+    "src": "/media/volvo-ignition-phone-future-lions/01.webp",
     "w": 1400,
     "h": 788
    },
    {
     "type": "image",
-    "src": "/work/volvo-ignition-phone-future-lions/02.webp",
+    "src": "/media/volvo-ignition-phone-future-lions/02.webp",
     "w": 1400,
     "h": 788
    },
@@ -1208,7 +1208,7 @@
   "year": 2024,
   "behance": "https://www.behance.net/gallery/212381101/Falta-de-Respeto",
   "cover": {
-   "src": "/work/falta-de-respeto/cover.webp",
+   "src": "/media/falta-de-respeto/cover.webp",
    "w": 808,
    "h": 632
   },
@@ -1228,7 +1228,7 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/falta-de-respeto/01.webp",
+    "src": "/media/falta-de-respeto/01.webp",
     "w": 1400,
     "h": 357
    },
@@ -1240,7 +1240,7 @@
    },
    {
     "type": "image",
-    "src": "/work/falta-de-respeto/02.webp",
+    "src": "/media/falta-de-respeto/02.webp",
     "w": 1400,
     "h": 357
    }
@@ -1255,7 +1255,7 @@
   "year": 2024,
   "behance": "https://www.behance.net/gallery/212379975/Palabras-de-resistencIA-Amnistia-Internacional",
   "cover": {
-   "src": "/work/palabras-de-resistencia-amnistia-internacional/cover.webp",
+   "src": "/media/palabras-de-resistencia-amnistia-internacional/cover.webp",
    "w": 808,
    "h": 633
   },
@@ -1275,7 +1275,7 @@
   "blocks": [
    {
     "type": "image",
-    "src": "/work/palabras-de-resistencia-amnistia-internacional/01.webp",
+    "src": "/media/palabras-de-resistencia-amnistia-internacional/01.webp",
     "w": 1400,
     "h": 357
    },
@@ -1287,14 +1287,14 @@
    },
    {
     "type": "loop",
-    "src": "/work/palabras-de-resistencia-amnistia-internacional/02.mp4",
-    "poster": "/work/palabras-de-resistencia-amnistia-internacional/02.webp",
+    "src": "/media/palabras-de-resistencia-amnistia-internacional/02.mp4",
+    "poster": "/media/palabras-de-resistencia-amnistia-internacional/02.webp",
     "w": 1200,
     "h": 314
    },
    {
     "type": "image",
-    "src": "/work/palabras-de-resistencia-amnistia-internacional/03.webp",
+    "src": "/media/palabras-de-resistencia-amnistia-internacional/03.webp",
     "w": 1400,
     "h": 460
    }

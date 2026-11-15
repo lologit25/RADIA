@@ -8,7 +8,7 @@ Portafolio de redacción creativa. Next.js 16 (App Router) + Tailwind v4, armado
   con el acento coral reemplazado por celeste pastel (`--accent` en `src/app/globals.css`).
 - **Contenido:** los 13 proyectos (8 profesionales y 5 de estudiante), créditos y premios del perfil de
   [Behance](https://www.behance.net/paoloperezramos). Los datos viven en `src/data/projects.json`
-  y los medios en `public/work/<proyecto>/`.
+  y los medios en `public/media/<proyecto>/`.
 - **Inicio:** video de tinta negra cayendo sobre una pluma de ave (`public/hero/feather.*`, generado con
   Google Flow), reproducido por `src/components/site/HeroFilm.tsx`.
 - **Logos:** los de las marcas son los oficiales, convertidos a blanco (`public/logos/`). Pertenecen a
