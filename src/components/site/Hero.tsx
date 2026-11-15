@@ -4,6 +4,8 @@ import { clients, profile } from "@/lib/projects";
 import { T } from "./Bits";
 import { InkScene } from "./InkScene";
 
+const brands = clients.map((client) => logos[client]).filter(Boolean);
+
 export function Hero() {
   return (
     <section className="hero" data-hero>
@@ -33,25 +35,18 @@ export function Hero() {
           <div className="marquee-track">
             {[0, 1].map((copy) => (
               <ul key={copy} aria-hidden={copy === 1}>
-                {clients.map((client) => {
-                  const logo = logos[client];
-                  return (
-                    <li key={client}>
-                      {logo ? (
-                        <Image
-                          src={logo.src}
-                          alt={copy === 0 ? logo.name : ""}
-                          width={logo.w}
-                          height={logo.h}
-                          style={{ height: `calc(var(--logo-h) * ${logo.scale})` }}
-                          unoptimized
-                        />
-                      ) : (
-                        client
-                      )}
-                    </li>
-                  );
-                })}
+                {brands.map((logo) => (
+                  <li key={logo.name}>
+                    <Image
+                      src={logo.src}
+                      alt={copy === 0 ? logo.name : ""}
+                      width={logo.w}
+                      height={logo.h}
+                      style={{ height: `calc(var(--logo-h) * ${logo.scale})` }}
+                      unoptimized
+                    />
+                  </li>
+                ))}
               </ul>
             ))}
           </div>

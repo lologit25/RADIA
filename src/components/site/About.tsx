@@ -18,8 +18,8 @@ export function About({ index, total }: { index: number; total: number }) {
             </h2>
             <Words
               className="about-text"
-              es={`Soy ${profile.name}, redactor creativo. Desde 2024 soy parte del equipo creativo de ${profile.company}, en Montevideo. Nos encargamos de la comunicación 360 de Tigo Paraguay y de muchas marcas locales como Pilsen, Pepsi, FIAT, INAVI y Bagno & Company.`}
-              en={`I'm ${profile.name}, a creative copywriter. Since 2024 I've been part of the creative team at ${profile.company}, in Montevideo. We handle 360 communication for Tigo Paraguay and for many local brands like Pilsen, Pepsi, FIAT, INAVI and Bagno & Company.`}
+              es={`Soy ${profile.name}, redactor creativo. Desde 2024 soy parte del equipo creativo de ${profile.company}. Nos encargamos de la comunicación 360 de Tigo Paraguay y de muchas marcas locales como Pilsen, Pepsi, FIAT e INAVI.`}
+              en={`I'm ${profile.name}, a creative copywriter. Since 2024 I've been part of the creative team at ${profile.company}. We handle 360 communication for Tigo Paraguay and for many local brands like Pilsen, Pepsi, FIAT and INAVI.`}
             />
             <div className="rv">
               <GhostButton href={profile.linkedin}>LinkedIn</GhostButton>
