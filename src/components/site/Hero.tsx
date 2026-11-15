@@ -2,14 +2,14 @@ import Image from "next/image";
 import { logos } from "@/lib/logos";
 import { clients, profile } from "@/lib/projects";
 import { T } from "./Bits";
-import { InkScene } from "./InkScene";
+import { HeroFilm } from "./HeroFilm";
 
 const brands = clients.map((client) => logos[client]).filter(Boolean);
 
 export function Hero() {
   return (
     <section className="hero" data-hero>
-      <InkScene />
+      <HeroFilm />
 
       <h1 className="hero-title">
         <span className="line">

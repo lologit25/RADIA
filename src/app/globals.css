@@ -345,39 +345,41 @@ html[lang="en"] .lang [data-set="en"] {
 }
 
 .ink-stage {
+  --px: 0;
+  --py: 0;
   position: relative;
   z-index: 1;
   flex: none;
   width: 100%;
-  height: min(58svh, 620px);
+  height: min(60svh, 640px);
   margin-bottom: clamp(-110px, -6.5vw, -36px);
   pointer-events: none;
+  perspective: 1200px;
 }
 
-.ink-stage-canvas {
+.ink-film {
   position: absolute;
-  inset: 0;
-  opacity: 0;
-  transform: translate3d(0, -8%, 0);
-  transition:
-    opacity 1.6s var(--ease),
-    transform 2.4s var(--ease);
-}
-
-.ink-stage.is-ready .ink-stage-canvas {
-  opacity: 1;
-  transform: none;
-}
-
-.ink-stage-canvas {
-  -webkit-mask-image: linear-gradient(180deg, transparent, #000 16%);
-  mask-image: linear-gradient(180deg, transparent, #000 16%);
-}
-
-.ink-stage-canvas canvas {
-  display: block;
-  width: 100%;
+  top: 0;
+  left: 50%;
+  width: auto;
   height: 100%;
+  max-width: none;
+  translate: -50% 0;
+  mix-blend-mode: lighten;
+  transform: translate3d(calc(var(--px) * -14px), calc(var(--py) * -8px), 0) rotateY(calc(var(--px) * 5deg))
+    rotateX(calc(var(--py) * -3deg));
+  animation: film-in 2.2s var(--ease) both;
+}
+
+@keyframes film-in {
+  from {
+    opacity: 0;
+    translate: -50% -6%;
+  }
+}
+
+html.js:not(.is-loaded) .ink-film {
+  animation-play-state: paused;
 }
 
 .ink-stage-glow {
@@ -385,104 +387,6 @@ html[lang="en"] .lang [data-set="en"] {
   inset: 30% 20% -20%;
   background: radial-gradient(closest-side, rgba(169, 216, 245, 0.16), transparent);
   filter: blur(40px);
-}
-
-.ink-stage .ink {
-  height: 100%;
-  margin-inline: auto;
-}
-
-.ink {
-  position: relative;
-  z-index: 1;
-  flex: none;
-  height: min(54svh, 500px);
-  aspect-ratio: 400 / 560;
-  animation: ink-in 2.2s var(--ease) both;
-}
-
-.ink svg {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.ink-glow {
-  position: absolute;
-  inset: 35% -70% -25%;
-  background: radial-gradient(closest-side, rgba(169, 216, 245, 0.2), transparent);
-  filter: blur(30px);
-  pointer-events: none;
-}
-
-.ink-sway {
-  transform-origin: 200px 0;
-  animation: ink-sway 8s ease-in-out infinite alternate;
-}
-
-.ink-run {
-  animation: ink-run 4.2s cubic-bezier(0.5, 0, 0.9, 0.6) infinite;
-}
-
-.ink-drop {
-  transform-box: fill-box;
-  transform-origin: 50% 0;
-  animation: ink-drop 4.2s linear infinite;
-}
-
-@keyframes ink-in {
-  from {
-    transform: translate3d(0, -100%, 0);
-  }
-}
-
-@keyframes ink-sway {
-  from {
-    transform: rotate(-1.1deg);
-  }
-  to {
-    transform: rotate(1.1deg);
-  }
-}
-
-@keyframes ink-run {
-  0% {
-    transform: translateY(-80px);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.9;
-  }
-  55%,
-  100% {
-    transform: translateY(240px);
-    opacity: 0;
-  }
-}
-
-/* The drop swells at the tip, lets go, accelerates and fades behind the title. */
-@keyframes ink-drop {
-  0%,
-  42% {
-    transform: translateY(-14px) scale(0);
-    opacity: 1;
-    animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
-  }
-  68% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    animation-timing-function: cubic-bezier(0.7, 0, 1, 0.6);
-  }
-  94% {
-    transform: translateY(300px) scale(0.9, 1.15);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(330px) scale(0.9, 1.15);
-    opacity: 0;
-  }
 }
 
 .hero {
