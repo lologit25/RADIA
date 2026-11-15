@@ -512,17 +512,68 @@ html.js:not(.is-loaded) .ink-film {
 
 /* ---------- About ---------- */
 
+/* Solid accent block, the way the reference uses its coral sections. */
 .about {
+  --radius: clamp(28px, 4.4vw, 64px);
   position: relative;
-  padding-top: 56px;
-  background: linear-gradient(180deg, transparent, rgba(127, 195, 238, 0.2) 40px, transparent 220px);
 }
 
 .about-panel {
-  padding: 26px var(--pad) clamp(90px, 11vw, 160px);
-  border-radius: clamp(28px, 4.4vw, 64px) clamp(28px, 4.4vw, 64px) 0 0;
-  background: var(--panel);
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.06);
+  padding: 26px var(--pad) calc(clamp(90px, 11vw, 160px) + var(--radius));
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.about-panel .section-head {
+  color: rgba(5, 13, 18, 0.62);
+}
+
+.about-panel .about-title,
+.about-panel .career-place,
+.about-panel .career-role b {
+  color: var(--accent-ink);
+}
+
+.about-panel .w {
+  color: rgba(5, 13, 18, 0.28);
+}
+
+.about-panel .w.is-lit {
+  color: var(--accent-ink);
+}
+
+.about-panel .career-label,
+.about-panel .career-role {
+  color: rgba(5, 13, 18, 0.66);
+}
+
+.about-panel .career-label i {
+  background: var(--accent-ink);
+}
+
+.about-panel .career-period {
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+
+.about-panel .career-list li::before,
+.about-panel .career-list li:last-child::after {
+  background: rgba(5, 13, 18, 0.3);
+}
+
+.about-panel .ghost-btn {
+  border-color: rgba(5, 13, 18, 0.5);
+  color: var(--accent-ink);
+}
+
+.about-panel .ghost-btn::before {
+  background: var(--accent-ink);
+}
+
+.about-panel .ghost-btn:hover {
+  border-color: var(--accent-ink);
+  color: var(--accent);
 }
 
 .about-panel > .section-head {
@@ -659,10 +710,17 @@ html:not(.js) .career-list li::after {
 
 .disciplines {
   position: relative;
-  padding: 0 var(--pad);
+  z-index: 1;
+  margin-top: calc(clamp(28px, 4.4vw, 64px) * -1);
+  padding: clamp(28px, 4.4vw, 64px) var(--pad) 0;
+  border-radius: clamp(28px, 4.4vw, 64px) clamp(28px, 4.4vw, 64px) 0 0;
   background:
     radial-gradient(60% 50% at 78% 60%, rgba(255, 255, 255, 0.07), transparent 70%),
     linear-gradient(180deg, var(--panel), var(--bg));
+}
+
+.disciplines > .section-head {
+  border-top: 0;
 }
 
 .disciplines-grid {
