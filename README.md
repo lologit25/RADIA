@@ -38,3 +38,12 @@ src/components/site/Motion.tsx# Scroll suave (Lenis), reveals y texto que se ilu
 src/lib/projects.ts           # Tipos + perfil
 docs/research/withhoney/      # Notas de la referencia
 ```
+
+## Publicar en Cloudflare Pages (gratis)
+
+El sitio se exporta como archivos estáticos en la carpeta `out`.
+
+1. En dash.cloudflare.com: **Workers & Pages → Create → Pages → Connect to Git** y elegir este repositorio.
+2. Rama de producción: la que se quiera publicar.
+3. Build command: `npm run build` · Build output directory: `out`.
+4. Deploy. Cloudflare da una dirección `*.pages.dev` y vuelve a publicar con cada push.
