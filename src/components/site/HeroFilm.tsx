@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Hero visual: a film of black honey pouring onto a feather quill and running
- * off it as ink. It fades through black at the loop point. The film leans slightly towards the pointer.
+ * Hero visual: a film of black ink pouring onto a feather quill and running
+ * off its point. It fades through black at the loop point. The film leans slightly towards the pointer.
  */
 export function HeroFilm() {
   const stageRef = useRef<HTMLDivElement>(null);
@@ -58,8 +58,8 @@ export function HeroFilm() {
         ref={videoRef}
         className="ink-film"
         poster="/hero/feather.jpg"
-        width={1280}
-        height={720}
+        width={720}
+        height={1100}
         muted
         loop
         playsInline

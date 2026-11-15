@@ -351,9 +351,9 @@ html[lang="en"] .lang [data-set="en"] {
   z-index: 1;
   flex: none;
   width: 100%;
-  /* 76vw keeps the whole feather in frame on narrow screens (16:9 film, 135% wide). */
-  height: min(56svh, 640px, 76vw);
-  margin-bottom: clamp(-34px, -2vw, -12px);
+  height: min(64svh, 700px);
+  /* The lowest tenth of the film is empty black; the title sits over it. */
+  margin-bottom: clamp(-52px, -5svh, -24px);
   pointer-events: none;
   perspective: 1200px;
 }
@@ -1599,10 +1599,6 @@ html:not(.js) .footer-word span {
 
   .hero-meta span + span::before {
     margin-right: 10px;
-  }
-
-  .ink-stage {
-    margin-top: 13svh;
   }
 
   .hero-meta {
