@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { logos } from "@/lib/logos";
 import { clients, profile } from "@/lib/projects";
+import { T } from "./Bits";
 import { InkScene } from "./InkScene";
 
 export function Hero() {
@@ -13,7 +14,9 @@ export function Hero() {
           <span>Paolo Pérez Ramos,</span>
         </span>
         <span className="line">
-          <span>redactor creativo.</span>
+          <span>
+            <T es="redactor creativo." en="creative copywriter." />
+          </span>
         </span>
       </h1>
 
@@ -23,7 +26,9 @@ export function Hero() {
       </p>
 
       <div className="clients">
-        <p className="clients-label">Marcas</p>
+        <p className="clients-label">
+          <T es="Marcas" en="Brands" />
+        </p>
         <div className="marquee">
           <div className="marquee-track">
             {[0, 1].map((copy) => (

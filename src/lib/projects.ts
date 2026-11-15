@@ -67,3 +67,22 @@ export const clients = Array.from(
 export function pad(n: number): string {
   return String(n).padStart(2, "0");
 }
+
+const kindsEn: Record<string, string> = {
+  "Campaña integral": "Integrated campaign",
+  "Film · Música": "Film · Music",
+  Gráfica: "Print",
+  "Idea alternativa": "Alternative idea",
+  "Campaña gráfica": "Print campaign",
+  "Innovación · Future Lions": "Innovation · Future Lions",
+};
+
+const medalsEn: Record<string, string> = { Plata: "Silver", Oro: "Gold", Bronce: "Bronze" };
+
+export function kindLabel(kind: string): string {
+  return kindsEn[kind] ?? kind;
+}
+
+export function medalLabel(medal: string): string {
+  return medalsEn[medal] ?? medal;
+}

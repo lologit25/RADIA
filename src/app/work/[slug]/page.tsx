@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Arrow, GhostButton } from "@/components/site/Bits";
+import { Arrow, GhostButton, T } from "@/components/site/Bits";
 import { Blocks } from "@/components/site/Blocks";
 import { Footer } from "@/components/site/Footer";
 import { Nav } from "@/components/site/Nav";
-import { pad, projects } from "@/lib/projects";
+import { kindLabel, medalLabel, pad, projects } from "@/lib/projects";
 
 type Params = Promise<{ slug: string }>;
 
@@ -32,7 +32,8 @@ export default async function ProjectPage({ params }: { params: Params }) {
   const group = projects.filter((p) => p.group === project.group);
   const position = group.indexOf(project);
   const next = group[(position + 1) % group.length];
-  const groupLabel = project.group === "student" ? "Estudiante" : "Profesional";
+  const groupLabel =
+    project.group === "student" ? <T es="Estudiante" en="Student" /> : <T es="Profesional" en="Professional" />;
   const backHref = project.group === "student" ? "/#estudiante" : "/#trabajos";
 
   return (
@@ -46,7 +47,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
             </span>
             <span>{groupLabel}</span>
             <Link href={backHref} className="project-back">
-              ← Volver
+              ← <T es="Volver" en="Back" />
             </Link>
           </div>
           <h1 className="project-title">
@@ -57,25 +58,35 @@ export default async function ProjectPage({ params }: { params: Params }) {
           <dl className="project-meta">
             {project.client && (
               <div>
-                <dt>Cliente</dt>
+                <dt>
+                  <T es="Cliente" en="Client" />
+                </dt>
                 <dd>{project.client}</dd>
               </div>
             )}
             <div>
-              <dt>Formato</dt>
-              <dd>{project.kind}</dd>
+              <dt>
+                <T es="Formato" en="Format" />
+              </dt>
+              <dd>
+                <T es={project.kind} en={kindLabel(project.kind)} />
+              </dd>
             </div>
             <div>
-              <dt>Año</dt>
+              <dt>
+                <T es="Año" en="Year" />
+              </dt>
               <dd>{project.year}</dd>
             </div>
             {project.awards.length > 0 && (
               <div>
-                <dt>Premios</dt>
+                <dt>
+                  <T es="Premios" en="Awards" />
+                </dt>
                 <dd className="project-awards">
                   {project.awards.map((award, i) => (
                     <span className="tag" key={i}>
-                      {award.medal}
+                      <T es={award.medal} en={medalLabel(award.medal)} />
                     </span>
                   ))}
                 </dd>
@@ -88,7 +99,9 @@ export default async function ProjectPage({ params }: { params: Params }) {
 
         <section className="project-info">
           <div>
-            <h2>Créditos</h2>
+            <h2>
+              <T es="Créditos" en="Credits" />
+            </h2>
             <dl className="credits">
               {project.credits.map((credit) => (
                 <div key={credit.role} className="rv">
@@ -100,14 +113,22 @@ export default async function ProjectPage({ params }: { params: Params }) {
           </div>
           {project.awards.length > 0 && (
             <div>
-              <h2>Reconocimientos</h2>
+              <h2>
+                <T es="Reconocimientos" en="Recognition" />
+              </h2>
               <dl className="credits">
                 {project.awards.map((award, i) => (
                   <div key={i} className="rv">
-                    <dt>{award.medal}</dt>
+                    <dt>
+                      <T es={award.medal} en={medalLabel(award.medal)} />
+                    </dt>
                     <dd>
                       {award.festival}
-                      {award.jury.length > 0 && <small>Jurado: {award.jury.join(", ")}</small>}
+                      {award.jury.length > 0 && (
+                        <small>
+                          <T es="Jurado" en="Jury" />: {award.jury.join(", ")}
+                        </small>
+                      )}
                     </dd>
                   </div>
                 ))}
@@ -115,12 +136,16 @@ export default async function ProjectPage({ params }: { params: Params }) {
             </div>
           )}
           <div className="rv">
-            <GhostButton href={project.behance}>Ver en Behance</GhostButton>
+            <GhostButton href={project.behance}>
+              <T es="Ver en Behance" en="View on Behance" />
+            </GhostButton>
           </div>
         </section>
 
         <Link href={`/work/${next.slug}`} className="project-next">
-          <span className="mono-note">Siguiente proyecto</span>
+          <span className="mono-note">
+            <T es="Siguiente proyecto" en="Next project" />
+          </span>
           <span className="project-next-title">
             {next.title}
             <Arrow />

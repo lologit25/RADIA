@@ -32,7 +32,8 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
+            __html:
+              "document.documentElement.classList.add('js');try{var l=localStorage.getItem('lang');if(l==='en'||l==='es')document.documentElement.lang=l}catch(e){}",
           }}
         />
       </head>

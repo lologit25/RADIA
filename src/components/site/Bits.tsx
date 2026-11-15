@@ -1,5 +1,15 @@
 import Link from "next/link";
 
+/** Bilingual text: both languages are rendered and CSS shows the active one. */
+export function T({ es, en }: { es: React.ReactNode; en: React.ReactNode }) {
+  return (
+    <>
+      <span data-l="es">{es}</span>
+      <span data-l="en">{en}</span>
+    </>
+  );
+}
+
 export function Arrow({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 12 12" width="1em" height="1em" fill="none" aria-hidden="true">
@@ -8,7 +18,7 @@ export function Arrow({ className }: { className?: string }) {
   );
 }
 
-export function SectionHead({ index, total, label }: { index: number; total: number; label: string }) {
+export function SectionHead({ index, total, label }: { index: number; total: number; label: React.ReactNode }) {
   const pad = (n: number) => String(n).padStart(2, "0");
   return (
     <div className="section-head rv">
@@ -39,14 +49,23 @@ export function GhostButton({ href, children }: { href: string; children: React.
   );
 }
 
-export function Words({ text, className }: { text: string; className?: string }) {
+function Fill({ text, className, lang }: { text: string; className?: string; lang: "es" | "en" }) {
   return (
-    <p className={className} data-fill>
+    <p className={className} data-fill data-l={lang} lang={lang}>
       {text.split(" ").map((word, i) => (
         <span className="w" key={i}>
           {word}{" "}
         </span>
       ))}
     </p>
+  );
+}
+
+export function Words({ es, en, className }: { es: string; en: string; className?: string }) {
+  return (
+    <>
+      <Fill text={es} className={className} lang="es" />
+      <Fill text={en} className={className} lang="en" />
+    </>
   );
 }

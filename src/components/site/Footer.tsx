@@ -1,13 +1,15 @@
 import { profile } from "@/lib/projects";
-import { Arrow } from "./Bits";
+import { Arrow, T } from "./Bits";
 
 export function Footer() {
   return (
     <footer className="footer" id="contacto">
       <a className="footer-cta" href={profile.linkedin} target="_blank" rel="noreferrer">
-        <span className="footer-cta-q">¿Hablamos?</span>
+        <span className="footer-cta-q">
+          <T es="¿Hablamos?" en="Shall we talk?" />
+        </span>
         <span className="footer-cta-a">
-          Acá
+          <T es="Acá" en="Here" />
           <Arrow />
           <Arrow />
           <Arrow />
@@ -15,14 +17,14 @@ export function Footer() {
       </a>
       <div className="footer-meta">
         <span>
-          {profile.role} — {profile.company}
+          <T es="Redactor creativo" en="Creative copywriter" /> — {profile.company}
         </span>
         <span>{profile.location}</span>
-        <a href={profile.behance} target="_blank" rel="noreferrer">
-          Behance ↗
-        </a>
         <a href={profile.linkedin} target="_blank" rel="noreferrer">
           LinkedIn ↗
+        </a>
+        <a href={profile.behance} target="_blank" rel="noreferrer">
+          Behance ↗
         </a>
         <span>©{new Date().getFullYear()}</span>
       </div>

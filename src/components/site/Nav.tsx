@@ -1,32 +1,22 @@
 import Link from "next/link";
-import { profile } from "@/lib/projects";
+import { T } from "./Bits";
+import { LangToggle } from "./LangToggle";
 
 export function Nav() {
   return (
     <header className="nav" data-nav>
-      <Link className="nav-logo" href="/" aria-label="Inicio">
-        PAOLO—
-        <br />
-        ©{new Date().getFullYear()}
-      </Link>
       <nav className="nav-links" aria-label="Principal">
         <Link href="/#trabajos">
-          <i />
-          Trabajos
+          <T es="Trabajos" en="Work" />
         </Link>
-        <Link href="/#trayectoria">
-          <i />
-          Trayectoria
+        <Link href="/#sobre-mi">
+          <T es="Sobre mí" en="About me" />
         </Link>
-        <a href={profile.behance} target="_blank" rel="noreferrer">
-          <i />
-          Behance
-        </a>
-        <a href={profile.linkedin} target="_blank" rel="noreferrer">
-          <i />
-          LinkedIn
-        </a>
+        <Link href="/#contacto">
+          <T es="Contacto" en="Contact" />
+        </Link>
       </nav>
+      <LangToggle />
     </header>
   );
 }

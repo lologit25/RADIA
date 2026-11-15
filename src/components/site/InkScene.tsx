@@ -68,22 +68,23 @@ export function InkScene() {
       scene.environment = envTarget.texture;
 
       const plume = new THREE.MeshPhysicalMaterial({
-        color: 0xcfccc6,
-        roughness: 0.62,
-        metalness: 0,
-        sheen: 1,
-        sheenRoughness: 0.4,
-        sheenColor: 0xa9d8f5,
-        envMapIntensity: 0.45,
+        color: 0x08090b,
+        roughness: 0.4,
+        metalness: 0.55,
+        iridescence: 1,
+        iridescenceIOR: 1.5,
+        iridescenceThicknessMinimum: 180,
+        iridescenceThicknessMaximum: 420,
+        envMapIntensity: 3.1,
         side: THREE.DoubleSide,
       });
       const horn = new THREE.MeshPhysicalMaterial({
-        color: 0xe9e4da,
-        roughness: 0.22,
-        metalness: 0,
+        color: 0x0b0b0c,
+        roughness: 0.16,
+        metalness: 0.2,
         clearcoat: 1,
-        clearcoatRoughness: 0.08,
-        envMapIntensity: 0.6,
+        clearcoatRoughness: 0.06,
+        envMapIntensity: 1.8,
       });
       const ink = new THREE.MeshPhysicalMaterial({
         color: 0x000000,
@@ -97,16 +98,16 @@ export function InkScene() {
       const rig = new THREE.Group();
       scene.add(rig);
 
-      const key = new THREE.DirectionalLight(0xffffff, 1.9);
+      const key = new THREE.DirectionalLight(0xffffff, 3.2);
       key.position.set(-3.5, 4, 6);
       scene.add(key);
-      const rim = new THREE.DirectionalLight(0xa9d8f5, 1.6);
+      const rim = new THREE.DirectionalLight(0xa9d8f5, 4);
       rim.position.set(5, -1, -3);
       scene.add(rim);
 
       // ----- Feather quill (point down) -----
       const TILT = 0.62;
-      const SCALE = 1.2;
+      const SCALE = 1.27;
       const ORIGIN_X = -0.25;
       const ORIGIN_Y = 0.12;
       const HALF = 2;
@@ -151,39 +152,129 @@ export function InkScene() {
       shaftGeometry.computeVertexNormals();
       spin.add(new THREE.Mesh(shaftGeometry, horn));
 
-      // Vanes: two cupped sheets of barbs sweeping towards the top, with a few splits.
-      const vane = (side: 1 | -1, reach: number, splits: number[]) => {
-        const ROWS = 420;
-        const COLS = 20;
-        const geometry = new THREE.PlaneGeometry(1, 1, COLS, ROWS);
-        const position = geometry.attributes.position;
-        for (let i = 0; i < position.count; i++) {
-          const u = position.getX(i) + 0.5;
-          const v = position.getY(i) + 0.5;
-          const s = VANE_START + v * (1 - VANE_START);
-          spine.getPointAt(s, centre);
-          let width = reach * Math.pow(Math.sin(Math.PI * Math.pow(v, 0.55)), 0.62);
-          for (const split of splits) {
-            width *= 1 - 0.55 * Math.exp(-Math.pow((v - split) / 0.01, 2));
+      // Vanes: hundreds of individual barbs, each a thin tapering strand that hooks
+      // towards the tip, grouped in clumps so the vane splits like a real feather.
+      const random = (() => {
+        let seed = 7;
+        return () => {
+          seed = (seed * 16807) % 2147483647;
+          return seed / 2147483647;
+        };
+      })();
+      const SEGMENTS = 12;
+      const AROUND = 5;
+      const positions: number[] = [];
+      const normals: number[] = [];
+      const indices: number[] = [];
+      const point = new THREE.Vector3();
+      const previous = new THREE.Vector3();
+      const tangent = new THREE.Vector3();
+      const sideways = new THREE.Vector3();
+      const upward = new THREE.Vector3();
+      const zAxis = new THREE.Vector3(0, 0, 1);
+
+      const strand = (
+        s: number,
+        side: number,
+        length: number,
+        sweep: number,
+        hook: number,
+        cup: number,
+        lift: number,
+        thickness: number,
+      ) => {
+        spine.getPointAt(s, centre);
+        const base = positions.length / 3;
+        for (let k = 0; k <= SEGMENTS; k++) {
+          const u = k / SEGMENTS;
+          const angle = sweep + hook * u * u;
+          const reach = length * u;
+          point.set(
+            centre.x + side * Math.cos(angle) * reach,
+            centre.y + Math.sin(angle) * reach + hook * 0.12 * length * u * u,
+            lift * u - cup * reach * reach,
+          );
+          if (k === 0) {
+            tangent.set(side * Math.cos(sweep), Math.sin(sweep), 0);
+          } else {
+            tangent.subVectors(point, previous).normalize();
           }
-          width *= 1 + 0.02 * Math.sin(v * 37) + 0.012 * Math.sin(v * 113);
-          const sweep = 0.42 + v * 0.55;
-          const distance = u * width;
-          const barbs = Math.sin(v * Math.PI * 2 * 70);
-          position.setXYZ(
-            i,
-            centre.x + side * Math.cos(sweep) * distance,
-            centre.y + Math.sin(sweep) * distance,
-            -0.3 * distance * distance +
-              0.02 * Math.sin(v * 9 + side) * u +
-              0.008 * barbs * Math.pow(u, 0.35),
+          previous.copy(point);
+          sideways.crossVectors(tangent, zAxis).normalize();
+          upward.crossVectors(sideways, tangent).normalize();
+          const radius = thickness * (1 - 0.72 * u);
+          for (let j = 0; j < AROUND; j++) {
+            const around = (j / AROUND) * Math.PI * 2;
+            const nx = Math.cos(around);
+            const nz = Math.sin(around);
+            positions.push(
+              point.x + (sideways.x * nx * 1.5 + upward.x * nz * 0.6) * radius,
+              point.y + (sideways.y * nx * 1.5 + upward.y * nz * 0.6) * radius,
+              point.z + (sideways.z * nx * 1.5 + upward.z * nz * 0.6) * radius,
+            );
+            normals.push(
+              sideways.x * nx + upward.x * nz,
+              sideways.y * nx + upward.y * nz,
+              sideways.z * nx + upward.z * nz,
+            );
+          }
+          if (k > 0) {
+            for (let j = 0; j < AROUND; j++) {
+              const a = base + (k - 1) * AROUND + j;
+              const b = base + (k - 1) * AROUND + ((j + 1) % AROUND);
+              const c = base + k * AROUND + j;
+              const d = base + k * AROUND + ((j + 1) % AROUND);
+              indices.push(a, c, b, b, c, d);
+            }
+          }
+        }
+      };
+
+      const BARBS = compact ? 300 : 440;
+      for (const side of [1, -1]) {
+        const reach = side === 1 ? 0.86 : 0.6;
+        let clump = 0;
+        let clumpLeft = 0;
+        for (let i = 0; i < BARBS; i++) {
+          const v = (i + random() * 0.6) / BARBS;
+          if (clumpLeft-- <= 0) {
+            clumpLeft = 6 + Math.floor(random() * 34);
+            clump = (random() - 0.5) * 0.16;
+          }
+          const s = VANE_START + v * (1 - VANE_START) * 0.995;
+          const profile = Math.pow(Math.sin(Math.PI * Math.pow(v, 0.52)), 0.6);
+          const length = reach * profile * (0.93 + random() * 0.1) + 0.03;
+          strand(
+            s,
+            side,
+            length,
+            0.36 + v * 0.62 + clump + (random() - 0.5) * 0.02,
+            0.34 + random() * 0.08,
+            0.34 + clump * 0.6,
+            (random() - 0.5) * 0.03 + clump * 0.12,
+            0.0074,
           );
         }
-        geometry.computeVertexNormals();
-        spin.add(new THREE.Mesh(geometry, plume));
-      };
-      vane(1, 0.66, [0.24, 0.55, 0.8]);
-      vane(-1, 0.46, [0.4, 0.68]);
+      }
+      // Loose, downy barbs where the vane meets the bare shaft.
+      for (let i = 0; i < 70; i++) {
+        const side = i % 2 ? 1 : -1;
+        strand(
+          VANE_START - 0.035 + random() * 0.07,
+          side,
+          0.16 + random() * 0.3,
+          -0.5 + random() * 1.2,
+          (random() - 0.3) * 1.6,
+          (random() - 0.5) * 1.2,
+          (random() - 0.5) * 0.3,
+          0.003,
+        );
+      }
+      const vaneGeometry = new THREE.BufferGeometry();
+      vaneGeometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
+      vaneGeometry.setAttribute("normal", new THREE.Float32BufferAttribute(normals, 3));
+      vaneGeometry.setIndex(indices);
+      spin.add(new THREE.Mesh(vaneGeometry, plume));
 
       // Position on the quill's spine (0 = point, 1 = top) in rig space.
       const sinT = Math.sin(TILT);

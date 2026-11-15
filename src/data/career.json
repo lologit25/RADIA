@@ -1,14 +1,14 @@
 [
- {
-  "period": "Actualidad",
-  "place": "Publicis Impetu",
-  "role": "Redactor creativo",
-  "location": "Montevideo, Uruguay"
- },
- {
-  "period": "Formación",
-  "place": "Brother Escuela de Creativos",
-  "role": "Creatividad publicitaria",
-  "location": "Montevideo, Uruguay"
- }
+  {
+    "period": { "es": "Actualidad", "en": "Present" },
+    "place": "Publicis Impetu",
+    "role": { "es": "Redactor creativo", "en": "Creative copywriter" },
+    "location": "Montevideo, Uruguay"
+  },
+  {
+    "period": { "es": "Formación", "en": "Education" },
+    "place": "Brother Escuela de Creativos",
+    "role": { "es": "Creatividad publicitaria", "en": "Advertising creativity" },
+    "location": "Montevideo, Uruguay"
+  }
 ]
