@@ -1,27 +1,29 @@
 [
   {
-    "period": {
-      "es": "2024 — Hoy",
-      "en": "2024 — Now"
-    },
+    "period": { "es": "Oct 2024 — Hoy", "en": "Oct 2024 — Now" },
     "place": "Publicis Ímpetu",
-    "role": {
-      "es": "Redactor creativo",
-      "en": "Creative copywriter"
-    },
+    "role": { "es": "Redactor creativo", "en": "Creative copywriter" },
     "location": "Montevideo, Uruguay",
     "current": true
   },
   {
-    "period": {
-      "es": "Formación",
-      "en": "Education"
-    },
+    "period": { "es": "Jun — Oct 2024", "en": "Jun — Oct 2024" },
+    "place": "PIMOD",
+    "role": { "es": "Social Media Manager", "en": "Social Media Manager" },
+    "location": "Montevideo, Uruguay",
+    "current": false
+  },
+  {
+    "period": { "es": "Ene — Jun 2024", "en": "Jan — Jun 2024" },
+    "place": "Amén McCann",
+    "role": { "es": "Social Media Manager", "en": "Social Media Manager" },
+    "location": "Montevideo, Uruguay",
+    "current": false
+  },
+  {
+    "period": { "es": "Formación", "en": "Education" },
     "place": "Brother Escuela de Creativos",
-    "role": {
-      "es": "Creatividad publicitaria",
-      "en": "Advertising creativity"
-    },
+    "role": { "es": "Creatividad publicitaria", "en": "Advertising creativity" },
     "location": "Montevideo, Uruguay",
     "current": false
   }

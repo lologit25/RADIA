@@ -628,7 +628,7 @@ html.js:not(.is-loaded) .ink-film {
 .career-list li {
   position: relative;
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr) auto;
+  grid-template-columns: 112px minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
   padding: 20px 0;
