@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { InkClicks } from "@/components/site/InkClicks";
 import { Motion } from "@/components/site/Motion";
 import "./globals.css";
 
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s — Paolo Pérez Ramos",
   },
   description:
-    "Portafolio de Paolo Pérez Ramos, redactor creativo en Publicis Impetu, Montevideo. Campañas para Pepsi, Pilsen, FIAT, Coca-Cola, Tigo Paraguay, INAVI y Bagno & Company.",
+    "Portafolio de Paolo Pérez Ramos, redactor creativo en Publicis Impetu, Montevideo. Campañas para Pepsi, Pilsen, FIAT, Tigo Paraguay, INAVI y Bagno & Company.",
 };
 
 export const viewport: Viewport = {
@@ -39,6 +40,7 @@ export default function RootLayout({
         <div className="progress" data-progress aria-hidden="true" />
         <Motion />
         {children}
+        <InkClicks />
         <div className="grain" aria-hidden="true" />
       </body>
     </html>

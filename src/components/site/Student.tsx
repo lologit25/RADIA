@@ -22,7 +22,7 @@ export function Student({ index, total }: { index: number; total: number }) {
                     alt=""
                     width={project.cover.w}
                     height={project.cover.h}
-                    sizes="(max-width: 900px) 50vw, 18vw"
+                    sizes="(max-width: 900px) 50vw, 15vw"
                   />
                 </span>
                 <span className="student-title">{project.title}</span>

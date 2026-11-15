@@ -57,6 +57,7 @@ export const profile = {
   company: "Publicis Impetu",
   location: "Montevideo, Uruguay",
   behance: "https://www.behance.net/paoloperezramos",
+  linkedin: "https://www.linkedin.com/in/paolop%C3%A9rezramos",
 } as const;
 
 export const clients = Array.from(

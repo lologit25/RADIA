@@ -272,22 +272,6 @@ a:focus-visible {
   border-color: var(--accent);
 }
 
-.nav-cta {
-  padding: 6px 8px 5px;
-  border-radius: 3px;
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-weight: 600;
-  transition:
-    background 0.4s,
-    transform 0.5s var(--ease);
-}
-
-.nav-cta:hover {
-  background: var(--white);
-  transform: translateY(-1px);
-}
-
 /* ---------- Hero ---------- */
 
 .hero {
@@ -820,7 +804,7 @@ a:focus-visible {
 
 .student-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -868,16 +852,8 @@ a:focus-visible {
   transition-delay: 0.24s;
 }
 
-.awards-list li:nth-child(n + 2) {
-  transition-delay: 0.07s;
-}
-
-.awards-list li:nth-child(n + 3) {
-  transition-delay: 0.14s;
-}
-
-.awards-list li:nth-child(n + 4) {
-  transition-delay: 0.21s;
+.student-list li:nth-child(5) {
+  transition-delay: 0.32s;
 }
 
 .student-title {
@@ -899,92 +875,107 @@ a:focus-visible {
   color: var(--g-3);
 }
 
-/* ---------- Awards ---------- */
+/* ---------- Career ---------- */
 
-.awards {
-  position: relative;
+.career {
   padding: 0 var(--pad) clamp(90px, 12vw, 170px);
-  border-radius: clamp(28px, 4.4vw, 64px) clamp(28px, 4.4vw, 64px) 0 0;
-  background: var(--accent);
-  color: var(--accent-ink);
 }
 
-.awards .section-head {
-  margin-top: 0;
-  padding-top: 40px;
-  border-top: 0;
-  color: rgba(5, 13, 18, 0.62);
-}
-
-.awards-grid {
+.career-grid {
   display: grid;
   grid-template-columns: minmax(0, 25.5%) minmax(0, 1fr);
   gap: 16px;
-  padding-top: clamp(80px, 11vw, 150px);
+  padding-top: clamp(64px, 9vw, 130px);
 }
 
-.awards h2 {
+.career-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.career h2 {
   font-size: clamp(32px, 3.4vw, 48px);
   line-height: 1;
   letter-spacing: -0.04em;
+  color: var(--white);
 }
 
-.awards-list li {
-  border-top: 1px solid rgba(5, 13, 18, 0.22);
-}
-
-.awards-list li:last-child {
-  border-bottom: 1px solid rgba(5, 13, 18, 0.22);
-}
-
-.awards-list a {
+.career-list li {
   display: grid;
-  grid-template-columns: 40px minmax(0, 1fr) minmax(0, 0.8fr) 24px;
-  align-items: center;
+  grid-template-columns: 110px minmax(0, 1fr) minmax(0, 0.8fr);
+  align-items: baseline;
   gap: 16px;
-  padding: 18px 0;
-  transition: padding 0.6s var(--ease);
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
 }
 
-.awards-num {
-  font: 500 10px/12px var(--mono);
+.career-list li:last-child {
+  border-bottom: 1px solid var(--line);
 }
 
-.awards-medal {
-  font-size: clamp(34px, 5.4vw, 76px);
-  line-height: 1;
-  letter-spacing: -0.05em;
+.career-list li:nth-child(2) {
+  transition-delay: 0.08s;
 }
 
-.awards-meta {
+.career-period {
+  font: 400 10px/15px var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.career-place {
+  font-size: clamp(26px, 3.6vw, 52px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+}
+
+.career-role {
   display: flex;
   flex-direction: column;
   gap: 2px;
   font: 400 11px/16px var(--mono);
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  color: var(--g-1);
 }
 
-.awards-meta b {
-  font-weight: 600;
+.career-role b {
+  font-weight: 500;
+  color: var(--ink);
 }
 
-.awards-arrow {
-  font-size: 18px;
-  opacity: 0;
-  transform: translate(-8px, 8px);
+/* ---------- Monochrome media, colour on hover ---------- */
+
+.work-thumb img,
+.block-media > *,
+.block-grid > *,
+.block-video iframe {
+  filter: grayscale(1);
   transition:
-    opacity 0.4s,
-    transform 0.6s var(--ease);
+    filter 0.7s var(--ease),
+    transform 1.2s var(--ease);
 }
 
-.awards-list a:hover {
-  padding-left: 14px;
+.work-row:hover .work-thumb img,
+.block-media:hover > *,
+.block-grid > *:hover,
+.block-video:hover iframe {
+  filter: none;
 }
 
-.awards-list a:hover .awards-arrow {
-  opacity: 1;
-  transform: none;
+/* ---------- Ink on click ---------- */
+
+.ink-clicks {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 /* ---------- Footer ---------- */
@@ -993,10 +984,6 @@ a:focus-visible {
   position: relative;
   overflow: hidden;
   background: var(--bg);
-}
-
-main:has(.awards) + .footer {
-  background: linear-gradient(var(--accent), var(--accent)) top / 100% 80px no-repeat var(--bg);
 }
 
 .footer-cta {
@@ -1402,7 +1389,7 @@ html:not(.js) .footer-word span {
     display: none;
   }
 
-  .awards-grid,
+  .career-grid,
   .student-grid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -1416,17 +1403,9 @@ html:not(.js) .footer-word span {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .awards-list a {
-    grid-template-columns: 28px minmax(0, 1fr) 20px;
-  }
-
-  .awards-meta {
-    grid-column: 2;
-  }
-
-  .awards-arrow {
-    grid-column: 3;
-    grid-row: 1;
+  .career-list li {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .project-meta {

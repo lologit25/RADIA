@@ -1,5 +1,5 @@
 import { About } from "@/components/site/About";
-import { Awards } from "@/components/site/Awards";
+import { Career } from "@/components/site/Career";
 import { Disciplines } from "@/components/site/Disciplines";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
@@ -19,7 +19,7 @@ export default function Home() {
         <Disciplines index={2} total={TOTAL} />
         <Work index={3} total={TOTAL} />
         <Student index={4} total={TOTAL} />
-        <Awards index={5} total={TOTAL} />
+        <Career index={5} total={TOTAL} />
       </main>
       <Footer />
     </>

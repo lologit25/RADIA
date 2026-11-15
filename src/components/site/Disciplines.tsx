@@ -11,7 +11,7 @@ export function Disciplines({ index, total }: { index: number; total: number }) 
         <div className="disciplines-copy">
           <h2 className="rv">Redacción creativa para campañas de film, gráfica, social y música.</h2>
           <div className="rv">
-            <GhostButton href={profile.behance}>Contacto</GhostButton>
+            <GhostButton href={profile.linkedin}>Contacto</GhostButton>
           </div>
         </div>
         <ul className="disciplines-list" data-focus>

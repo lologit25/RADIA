@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { InkPen } from "./InkPen";
 
 /**
- * Hero visual: black honey pours from the top of the page onto a fountain pen,
- * runs down the barrel and leaves the nib as ink. Rendered with three.js; the
+ * Hero visual: black honey pours from the top of the page onto a feather quill,
+ * runs down the shaft and leaves the point as ink. Rendered with three.js; the
  * liquid is a metaball field re-polygonised every frame.
  */
 export function InkScene() {
@@ -46,7 +46,7 @@ export function InkScene() {
       camera.position.set(0, 0, 10.8);
 
       // Studio lighting baked into an environment map: soft boxes on black,
-      // so the black liquid reads through its reflections alone.
+      // so the black shapes read through their reflections alone.
       const studio = new THREE.Scene();
       const panel = (w: number, h: number, color: number, intensity: number, pos: [number, number, number]) => {
         const material = new THREE.MeshBasicMaterial({ color, side: THREE.DoubleSide });
@@ -61,24 +61,29 @@ export function InkScene() {
       panel(0.7, 9, 0xbfe3fa, 6, [8, -1, 3]);
       panel(3, 2, 0xffffff, 3, [3, 2, 9]);
       panel(5, 1.2, 0xa9d8f5, 2.5, [-2, -8, 4]);
+      panel(8, 8, 0xffffff, 1.1, [0, 1, 10]);
+      panel(10, 2, 0xffffff, 4, [0, -3, 9]);
       const pmrem = new THREE.PMREMGenerator(renderer);
       const envTarget = pmrem.fromScene(studio, 0.03);
       scene.environment = envTarget.texture;
 
-      const lacquer = new THREE.MeshPhysicalMaterial({
-        color: 0x030303,
-        roughness: 0.16,
+      const plume = new THREE.MeshPhysicalMaterial({
+        color: 0xcfccc6,
+        roughness: 0.62,
+        metalness: 0,
+        sheen: 1,
+        sheenRoughness: 0.4,
+        sheenColor: 0xa9d8f5,
+        envMapIntensity: 0.45,
+        side: THREE.DoubleSide,
+      });
+      const horn = new THREE.MeshPhysicalMaterial({
+        color: 0xe9e4da,
+        roughness: 0.22,
         metalness: 0,
         clearcoat: 1,
-        clearcoatRoughness: 0.06,
-        envMapIntensity: 1.25,
-      });
-      const steel = new THREE.MeshStandardMaterial({
-        color: 0xd9dde0,
-        roughness: 0.2,
-        metalness: 1,
-        envMapIntensity: 1.3,
-        side: THREE.DoubleSide,
+        clearcoatRoughness: 0.08,
+        envMapIntensity: 0.6,
       });
       const ink = new THREE.MeshPhysicalMaterial({
         color: 0x000000,
@@ -88,83 +93,106 @@ export function InkScene() {
         clearcoatRoughness: 0.02,
         envMapIntensity: 1.6,
       });
-      const pitch = new THREE.MeshBasicMaterial({ color: 0x000000 });
 
       const rig = new THREE.Group();
       scene.add(rig);
 
-      // ----- Fountain pen (nib down) -----
-      const TILT = 0.6;
-      const PEN_SCALE = 1.14;
-      const PEN_X = -0.2;
-      const PEN_Y = 0.12;
-      const pen = new THREE.Group();
-      pen.rotation.z = -TILT;
-      pen.position.set(PEN_X, PEN_Y, 0);
-      pen.scale.setScalar(PEN_SCALE);
-      rig.add(pen);
-      const GIRTH = 1.5;
+      const key = new THREE.DirectionalLight(0xffffff, 1.9);
+      key.position.set(-3.5, 4, 6);
+      scene.add(key);
+      const rim = new THREE.DirectionalLight(0xa9d8f5, 1.6);
+      rim.position.set(5, -1, -3);
+      scene.add(rim);
+
+      // ----- Feather quill (point down) -----
+      const TILT = 0.62;
+      const SCALE = 1.2;
+      const ORIGIN_X = -0.25;
+      const ORIGIN_Y = 0.12;
+      const HALF = 2;
+      const VANE_START = 0.2;
+      const bow = (s: number) => 0.3 * s * s;
+
+      const quill = new THREE.Group();
+      quill.rotation.z = -TILT;
+      quill.position.set(ORIGIN_X, ORIGIN_Y, 0);
+      quill.scale.setScalar(SCALE);
+      rig.add(quill);
       const spin = new THREE.Group();
-      spin.scale.set(GIRTH, 1, GIRTH);
-      pen.add(spin);
+      quill.add(spin);
 
-      const profile: Array<[number, number]> = [
-        [0.0, -1.38],
-        [0.08, -1.38],
-        [0.098, -1.3],
-        [0.122, -0.92],
-        [0.15, -0.64],
-        [0.168, -0.56],
-        [0.178, -0.5],
-        [0.19, -0.2],
-        [0.196, 0.4],
-        [0.188, 0.9],
-        [0.162, 1.16],
-        [0.1, 1.28],
-        [0.0, 1.31],
-      ];
-      const barrel = new THREE.Mesh(
-        new THREE.LatheGeometry(profile.map(([r, y]) => new THREE.Vector2(r, y)), 72),
-        lacquer,
+      const spine = new THREE.CatmullRomCurve3(
+        Array.from({ length: 17 }, (_, i) => {
+          const s = i / 16;
+          return new THREE.Vector3(bow(s), -HALF + s * HALF * 2, 0);
+        }),
       );
-      spin.add(barrel);
+      const shaftRadius = (s: number) =>
+        Math.min(0.01 + s * 1.5, 0.056 * Math.pow(1 - s, 0.85) + 0.006);
 
-      const band = (radius: number, height: number, y: number) => {
-        const mesh = new THREE.Mesh(new THREE.CylinderGeometry(radius, radius, height, 72, 1, true), steel);
-        mesh.position.y = y;
-        spin.add(mesh);
-      };
-      band(0.184, 0.05, -0.53);
-      band(0.2, 0.022, 0.52);
-      band(0.2, 0.022, 0.58);
-
-      // Nib: a curved steel sheet tapering to the tip.
-      const NIB_LENGTH = 0.82;
-      const nibGeometry = new THREE.PlaneGeometry(2, 1, 28, 40);
-      const nibPosition = nibGeometry.attributes.position;
-      const halfWidth = (v: number) =>
-        v < 0.7 ? 0.152 * Math.pow(v / 0.7, 0.72) : 0.152 - (v - 0.7) * 0.09;
-      for (let i = 0; i < nibPosition.count; i++) {
-        const u = nibPosition.getX(i);
-        const v = nibPosition.getY(i) + 0.5;
-        const x = u * halfWidth(v);
-        nibPosition.setXYZ(i, x, v * NIB_LENGTH, 0.085 - x * x * 3.4);
+      const RINGS = 140;
+      const SIDES = 14;
+      const shaftGeometry = new THREE.TubeGeometry(spine, RINGS, 1, SIDES, false);
+      const shaftPosition = shaftGeometry.attributes.position;
+      const centre = new THREE.Vector3();
+      for (let i = 0; i <= RINGS; i++) {
+        spine.getPointAt(i / RINGS, centre);
+        const radius = shaftRadius(i / RINGS);
+        for (let j = 0; j <= SIDES; j++) {
+          const index = i * (SIDES + 1) + j;
+          shaftPosition.setXYZ(
+            index,
+            centre.x + (shaftPosition.getX(index) - centre.x) * radius,
+            centre.y + (shaftPosition.getY(index) - centre.y) * radius,
+            centre.z + (shaftPosition.getZ(index) - centre.z) * radius,
+          );
+        }
       }
-      nibGeometry.computeVertexNormals();
-      const nib = new THREE.Group();
-      nib.add(new THREE.Mesh(nibGeometry, steel));
-      const slit = new THREE.Mesh(new THREE.PlaneGeometry(0.008, 0.45), pitch);
-      slit.position.set(0, 0.225, 0.087);
-      nib.add(slit);
-      const hole = new THREE.Mesh(new THREE.CircleGeometry(0.026, 24), pitch);
-      hole.position.set(0, 0.46, 0.087);
-      nib.add(hole);
-      const feed = new THREE.Mesh(new THREE.CylinderGeometry(0.085, 0.012, 0.66, 32), lacquer);
-      feed.position.set(0, 0.42, 0.01);
-      nib.add(feed);
-      nib.position.y = -1.38 - NIB_LENGTH + 0.2;
-      spin.add(nib);
-      const TIP_LOCAL = nib.position.y;
+      shaftGeometry.computeVertexNormals();
+      spin.add(new THREE.Mesh(shaftGeometry, horn));
+
+      // Vanes: two cupped sheets of barbs sweeping towards the top, with a few splits.
+      const vane = (side: 1 | -1, reach: number, splits: number[]) => {
+        const ROWS = 420;
+        const COLS = 20;
+        const geometry = new THREE.PlaneGeometry(1, 1, COLS, ROWS);
+        const position = geometry.attributes.position;
+        for (let i = 0; i < position.count; i++) {
+          const u = position.getX(i) + 0.5;
+          const v = position.getY(i) + 0.5;
+          const s = VANE_START + v * (1 - VANE_START);
+          spine.getPointAt(s, centre);
+          let width = reach * Math.pow(Math.sin(Math.PI * Math.pow(v, 0.55)), 0.62);
+          for (const split of splits) {
+            width *= 1 - 0.55 * Math.exp(-Math.pow((v - split) / 0.01, 2));
+          }
+          width *= 1 + 0.02 * Math.sin(v * 37) + 0.012 * Math.sin(v * 113);
+          const sweep = 0.42 + v * 0.55;
+          const distance = u * width;
+          const barbs = Math.sin(v * Math.PI * 2 * 70);
+          position.setXYZ(
+            i,
+            centre.x + side * Math.cos(sweep) * distance,
+            centre.y + Math.sin(sweep) * distance,
+            -0.3 * distance * distance +
+              0.02 * Math.sin(v * 9 + side) * u +
+              0.008 * barbs * Math.pow(u, 0.35),
+          );
+        }
+        geometry.computeVertexNormals();
+        spin.add(new THREE.Mesh(geometry, plume));
+      };
+      vane(1, 0.66, [0.24, 0.55, 0.8]);
+      vane(-1, 0.46, [0.4, 0.68]);
+
+      // Position on the quill's spine (0 = point, 1 = top) in rig space.
+      const sinT = Math.sin(TILT);
+      const cosT = Math.cos(TILT);
+      const onQuill = (s: number): [number, number] => {
+        const x = bow(s) * SCALE;
+        const y = (-HALF + s * HALF * 2) * SCALE;
+        return [ORIGIN_X + x * cosT + y * sinT, ORIGIN_Y - x * sinT + y * cosT];
+      };
 
       // ----- Liquid -----
       const FIELD_X = 2.0;
@@ -189,94 +217,72 @@ export function InkScene() {
         );
       };
 
-      // Position on the pen's axis (local y) in rig space.
-      const sinT = Math.sin(TILT);
-      const cosT = Math.cos(TILT);
-      const onPen = (localY: number): [number, number] => [
-        PEN_X + localY * PEN_SCALE * sinT,
-        PEN_Y + localY * PEN_SCALE * cosT,
-      ];
-      const penRadius = (y: number) => {
-        for (let i = 1; i < profile.length; i++) {
-          const [r1, y1] = profile[i];
-          const [r0, y0] = profile[i - 1];
-          if (y <= y1) return (r0 + ((r1 - r0) * (y - y0)) / (y1 - y0 || 1)) * PEN_SCALE * GIRTH;
-        }
-        return 0;
-      };
       const smooth = (v: number) => v * v * (3 - 2 * v);
-      const [capX, capY] = onPen(1.2);
-      const [tipX, tipY] = onPen(TIP_LOCAL - 0.02);
+      const [capX, capY] = onQuill(0.9);
+      const [tipX, tipY] = onQuill(0.004);
       const runs = [
-        { side: 0.9, period: 6.2, offset: 0.0, size: 0.17 },
-        { side: -0.5, period: 7.6, offset: 0.37, size: 0.15 },
-        { side: 0.2, period: 5.4, offset: 0.68, size: 0.16 },
-        { side: -1.0, period: 8.8, offset: 0.2, size: 0.13 },
+        { side: 0.9, period: 6.2, offset: 0.0, size: 0.115 },
+        { side: -0.6, period: 7.6, offset: 0.37, size: 0.1 },
+        { side: 0.3, period: 5.4, offset: 0.68, size: 0.11 },
       ];
 
       const pour = (t: number) => {
         liquid.reset();
 
-        // The stream: beads travelling down a slightly coiling column onto the pen.
+        // The stream: beads travelling down a slightly coiling column onto the feather.
         const top = FIELD_Y - 0.1;
         for (let y = top, i = 0; y > capY + 0.1; y -= 0.12, i++) {
           const sway = Math.sin(t * 1.4 + y * 1.7) * 0.016 * (top - y);
           ball(capX + sway, y, 0, 0.105 + 0.024 * Math.sin(i * 0.9 - t * 4.4));
         }
 
-        // Honey gathering around the end of the pen.
+        // Honey gathering over the top of the feather.
         const breathe = Math.sin(t * 0.9);
-        ball(capX, capY, 0, 0.41 + breathe * 0.02);
-        ball(capX - 0.2 + Math.sin(t * 0.6) * 0.04, capY - 0.22, 0.06, 0.33);
-        ball(capX + 0.1, capY + 0.2, 0, 0.27 - breathe * 0.015);
-        ball(capX + 0.1, capY - 0.36 + Math.sin(t * 0.7) * 0.03, 0.1, 0.23);
-        const [neckX, neckY] = onPen(0.8);
-        ball(neckX, neckY - 0.08, 0.05, 0.3 + Math.sin(t * 1.1) * 0.015);
+        ball(capX, capY, 0.02, 0.36 + breathe * 0.02);
+        ball(capX - 0.2 + Math.sin(t * 0.6) * 0.04, capY - 0.2, 0.06, 0.27);
+        ball(capX + 0.12, capY + 0.18, 0, 0.25 - breathe * 0.015);
+        ball(capX + 0.14, capY - 0.34 + Math.sin(t * 0.7) * 0.03, 0.08, 0.22);
+        const [neckX, neckY] = onQuill(0.8);
+        ball(neckX, neckY - 0.05, 0.05, 0.2 + Math.sin(t * 1.1) * 0.015);
 
-        // Runs creeping down the barrel towards the nib, sagging under it.
+        // Runs creeping down the shaft towards the point.
         for (const run of runs) {
           const p = (t / run.period + run.offset) % 1;
           const fade = Math.pow(Math.sin(Math.PI * p), 0.55);
           for (let k = 0; k < 5; k++) {
-            const localY = 0.8 - smooth(Math.max(0, p - k * 0.03)) * 2.1;
-            const [x, y] = onPen(localY);
-            const reach = penRadius(localY);
-            ball(
-              x + sinT * 0.02,
-              y - reach * 0.55,
-              run.side * reach * 0.75,
-              run.size * fade * (1 - k * 0.16) * (1 - p * 0.4),
-            );
+            const s = 0.7 - smooth(Math.max(0, p - k * 0.03)) * 0.62;
+            const [x, y] = onQuill(s);
+            ball(x, y - 0.03, run.side * 0.03, run.size * fade * (1 - k * 0.16) * (1 - p * 0.45));
           }
         }
 
-        // A heavy thread that sags from the barrel and drops off.
-        const [sagX, sagY] = onPen(0.05);
+        // A heavy thread that sags from the bare shaft and drops off.
+        const [sagX, sagY] = onQuill(0.2);
         const sag = (t / 5.2 + 0.4) % 1;
-        const sagBase = sagY - penRadius(0.05) * 0.8;
+        const sagBase = sagY - 0.05;
         if (sag < 0.7) {
           const stretch = smooth(sag / 0.7);
           for (let k = 0; k < 4; k++) {
-            ball(sagX, sagBase - stretch * 0.5 * (k / 3), 0.04, 0.07 + (k === 3 ? 0.07 * stretch : 0));
+            ball(sagX, sagBase - stretch * 0.5 * (k / 3), 0.02, 0.065 + (k === 3 ? 0.07 * stretch : 0));
           }
         } else {
           const fall = (sag - 0.7) / 0.3;
           const y = sagBase - 0.5 - fall * fall * 2.4;
-          ball(sagX, y, 0.04, 0.14 * Math.min(1, (y + FIELD_Y - 0.2) * 3));
-          ball(sagX, sagBase - 0.1 * (1 - fall), 0.04, 0.08 * (1 - fall));
+          ball(sagX, y, 0.02, 0.135 * Math.min(1, Math.max(0, (y + FIELD_Y - 0.2) * 3)));
+          ball(sagX, sagBase - 0.1 * (1 - fall), 0.02, 0.075 * (1 - fall));
         }
 
-        // Ink leaving the nib: a drop swells, lets go and accelerates away.
-        ball(tipX, tipY + 0.02, 0.05, 0.085);
+        // Ink leaving the point: a drop swells, lets go and accelerates away.
+        ball(tipX, tipY + 0.03, 0, 0.075);
         const q = (t / 3.4) % 1;
         if (q < 0.56) {
           const grow = smooth(q / 0.56);
-          ball(tipX, tipY - 0.03 - grow * 0.09, 0.05, 0.15 * grow);
+          ball(tipX, tipY - 0.03 - grow * 0.09, 0, 0.15 * grow);
         } else {
           const fall = (q - 0.56) / 0.44;
           const y = tipY - 0.12 - fall * fall * 1.9;
-          ball(tipX, y, 0.05, 0.15 * (1 - fall * 0.2) * Math.min(1, Math.max(0, (y + FIELD_Y - 0.2) * 3)));
-          ball(tipX, tipY - 0.03 - fall * 0.05, 0.05, 0.07 * (1 - fall));
+          ball(tipX, y, 0, 0.15 * (1 - fall * 0.2) * Math.min(1, Math.max(0, (y + FIELD_Y - 0.2) * 3)));
+          ball(tipX, tipY - 0.03 - fall * 0.05, 0, 0.07 * (1 - fall));
         }
 
         liquid.update();
@@ -317,7 +323,7 @@ export function InkScene() {
         const t = (performance.now() - started) / 1000 + 4;
         eased.x += (pointer.x - eased.x) * 0.04;
         eased.y += (pointer.y - eased.y) * 0.04;
-        spin.rotation.y = Math.sin(t * 0.32) * 0.5 + eased.x * 0.5;
+        spin.rotation.y = Math.sin(t * 0.32) * 0.42 + eased.x * 0.45;
         rig.rotation.y = eased.x * 0.16;
         rig.rotation.x = eased.y * 0.07;
         rig.rotation.z = Math.sin(t * 0.4) * 0.012;
@@ -344,7 +350,7 @@ export function InkScene() {
           const mesh = object as import("three").Mesh;
           mesh.geometry?.dispose();
         });
-        [lacquer, steel, ink, pitch].forEach((material) => material.dispose());
+        [plume, horn, ink].forEach((material) => material.dispose());
         renderer.dispose();
         renderer.domElement.remove();
       };

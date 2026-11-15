@@ -4,7 +4,7 @@ import { Arrow } from "./Bits";
 export function Footer() {
   return (
     <footer className="footer" id="contacto">
-      <a className="footer-cta" href={profile.behance} target="_blank" rel="noreferrer">
+      <a className="footer-cta" href={profile.linkedin} target="_blank" rel="noreferrer">
         <span className="footer-cta-q">¿Hablamos?</span>
         <span className="footer-cta-a">
           Acá
@@ -20,6 +20,9 @@ export function Footer() {
         <span>{profile.location}</span>
         <a href={profile.behance} target="_blank" rel="noreferrer">
           Behance ↗
+        </a>
+        <a href={profile.linkedin} target="_blank" rel="noreferrer">
+          LinkedIn ↗
         </a>
         <span>©{new Date().getFullYear()}</span>
       </div>

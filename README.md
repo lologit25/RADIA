@@ -6,14 +6,15 @@ Portafolio de redacción creativa. Next.js 16 (App Router) + Tailwind v4, armado
 
 - **Dirección de diseño:** estructura, ritmo y paleta de [withhoney.com](https://www.withhoney.com/),
   con el acento coral reemplazado por celeste pastel (`--accent` en `src/app/globals.css`).
-- **Contenido:** los 13 proyectos (9 profesionales y 4 de estudiante), créditos y premios del perfil de
+- **Contenido:** los 13 proyectos (8 profesionales y 5 de estudiante), créditos y premios del perfil de
   [Behance](https://www.behance.net/paoloperezramos). Los datos viven en `src/data/projects.json`
   y los medios en `public/work/<proyecto>/`.
 - **Inicio:** escena 3D en three.js (`src/components/site/InkScene.tsx`): miel negra que cae sobre una
-  pluma fuente, corre por el cuerpo y sale por la punta como tinta. Si no hay WebGL se muestra una
+  pluma de ave, corre por el cañón y sale por la punta como tinta. Si no hay WebGL se muestra una
   versión SVG (`InkPen.tsx`).
 - **Logos:** los de las marcas son los oficiales, convertidos a blanco (`public/logos/`). Pertenecen a
   sus respectivos dueños y se usan solo para identificar a los clientes.
+- **Trayectoria:** se edita en `src/data/career.json`.
 - **Tipografías:** Geist y Geist Mono, ambas de Google Fonts (`next/font/google`).
 
 ## Comandos

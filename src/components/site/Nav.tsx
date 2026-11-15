@@ -14,18 +14,19 @@ export function Nav() {
           <i />
           Trabajos
         </Link>
-        <Link href="/#premios">
+        <Link href="/#trayectoria">
           <i />
-          Premios
+          Trayectoria
         </Link>
         <a href={profile.behance} target="_blank" rel="noreferrer">
           <i />
           Behance
         </a>
+        <a href={profile.linkedin} target="_blank" rel="noreferrer">
+          <i />
+          LinkedIn
+        </a>
       </nav>
-      <Link className="nav-cta" href="/#contacto">
-        Hablemos
-      </Link>
     </header>
   );
 }
