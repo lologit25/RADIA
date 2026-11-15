@@ -9,9 +9,8 @@ Portafolio de redacción creativa. Next.js 16 (App Router) + Tailwind v4, armado
 - **Contenido:** los 13 proyectos (8 profesionales y 5 de estudiante), créditos y premios del perfil de
   [Behance](https://www.behance.net/paoloperezramos). Los datos viven en `src/data/projects.json`
   y los medios en `public/work/<proyecto>/`.
-- **Inicio:** escena 3D en three.js (`src/components/site/InkScene.tsx`): miel negra que cae sobre una
-  pluma de ave, corre por el cañón y sale por la punta como tinta. Si no hay WebGL se muestra una
-  versión SVG (`InkPen.tsx`).
+- **Inicio:** video de miel negra cayendo sobre una pluma de ave (`public/hero/feather.*`, generado con
+  Google Flow), reproducido por `src/components/site/HeroFilm.tsx`.
 - **Logos:** los de las marcas son los oficiales, convertidos a blanco (`public/logos/`). Pertenecen a
   sus respectivos dueños y se usan solo para identificar a los clientes.
 - **Trayectoria:** dentro de "Sobre mí"; se edita en `src/data/career.json`.

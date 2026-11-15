@@ -351,8 +351,9 @@ html[lang="en"] .lang [data-set="en"] {
   z-index: 1;
   flex: none;
   width: 100%;
-  height: min(60svh, 640px);
-  margin-bottom: clamp(-110px, -6.5vw, -36px);
+  /* 76vw keeps the whole feather in frame on narrow screens (16:9 film, 135% wide). */
+  height: min(56svh, 640px, 76vw);
+  margin-bottom: clamp(-34px, -2vw, -12px);
   pointer-events: none;
   perspective: 1200px;
 }
@@ -448,7 +449,7 @@ html.js:not(.is-loaded) .ink-film {
 .clients {
   width: calc(100% + var(--pad) * 2);
   margin-top: auto;
-  padding: 36px 0 22px;
+  padding: 26px 0 18px;
   animation: fade-in 1.4s 0.9s both;
 }
 
@@ -1598,6 +1599,10 @@ html:not(.js) .footer-word span {
 
   .hero-meta span + span::before {
     margin-right: 10px;
+  }
+
+  .ink-stage {
+    margin-top: 13svh;
   }
 
   .hero-meta {
